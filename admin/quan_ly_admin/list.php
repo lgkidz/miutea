@@ -1,4 +1,4 @@
-<div id="header" class="container-fluid">
+<div id="header" style="background-color: aqua;height: 50px;" class="container-fluid">
 	<div style="float: left;margin-right: 20px;">
 		<div style="float: left">
 			<img style="height: 40px;width: 40px;margin: 5px;" src="../../core_images/ava.png";>
@@ -16,6 +16,7 @@
   			</ul>
 		</div>	
 	</div>
+	<a style="margin:10px;float: right;" href="../adminpage.php"><button type="button" class="btn btn-primary">Quay lại</button></a>
 </div>
 <div id="inmd" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -51,7 +52,7 @@
 
   </div>
 </div>
-<table id="listAll">
+<table class="table table-striped">
 	<tr>
 		<th>Mã admin</th>
 		<th>Tên đăng nhập</th>

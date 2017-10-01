@@ -8,14 +8,6 @@ session_start();
 <?php include("../style_and_script.php"); ?>
 
 <title>Quản lý admin</title>
-<style>
-	#listAll td,th{
-		border: 1px solid black;
-		height: 30px;
-		width: 120px;
-		text-align: center;
-	}
-</style>
 </head>
 <body>
 <?php

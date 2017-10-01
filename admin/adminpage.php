@@ -67,7 +67,7 @@
 			Quản lý tin tức
 		</a>
 		</a>
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="#">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="quan_ly_feedback/">
 			Quản lý feedback
 		</a>
 		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="index.php" onClick="return confirm('Bạn thực sự muốn thoát?');">
