@@ -47,23 +47,23 @@
 <?php include("headerad.php"); ?>
 <div class="container-fluid">
 	<div class="row">
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="quan_ly_mat_hang/">
 			Quản lý mặt hàng
 		</a>
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="quan_ly_nhan_su/">
 			Quản lý nhân sự
 		</a>
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="thong_ke/">
 			Thống kê
 		</a>
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="don_hang/">
 			Đơn Hàng
 		</a>
 		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="quan_ly_admin/index.php">
 			Quản lý admin
 		</a>
 		</a>
-		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="#">
+		<a id="choice" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" href="quan_ly_tin_tuc/">
 			Quản lý tin tức
 		</a>
 		</a>

@@ -1,9 +1,11 @@
 <?php
+include("../../connection/connection.php");
 class get_feedback_model{
 	public $con;
 	
 	public function __construct(){
-		$this->con = new PDO("mysql:host=localhost;dbname=miutea","root","");
+		$this->con  = new connection();
+		$this->con = $this->con->con;
 	}
 	
 	public function get_no_id(){
