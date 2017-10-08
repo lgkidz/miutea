@@ -1,3 +1,6 @@
++# miutea
+ +Website đồ án PhP
+
 Hưỡng dẫn sử dụng:
 2. Copy toàn bộ project vào 1 thư mục mới trong folder "htdocs" của Xampp// mặc định là "miutea".
 
