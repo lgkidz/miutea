@@ -1,14 +1,50 @@
-+# miutea
- +Website đồ án PhP
+# MiuTea
 
-Hưỡng dẫn sử dụng:
-2. Copy toàn bộ project vào 1 thư mục mới trong folder "htdocs" của Xampp// mặc định là "miutea".
+Website project written in PhP
 
-3. Dùng PhpMyAdmin tạo 1 database mới tên là "miutea" //Viết liền không dấu, viết thường.
+## Getting Started
 
-4. Nhập/Import miutea.sql
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-5. Homepage: Localhost:port/miutea/
- +Homepage: Localhost:port/miutea/
- +Adminpage: Localhost:port/miutea/admin/
- +ID/Password đăng nhập cho admin: admin/000000
+### Installing
+
+
+
+Clone the project on your machine
+```
+C:\xampp\htdocs\
+```
+Open Git Bash here
+
+```
+git clone https://github.com/lgkidz/miutea.git
+```
+
+Import miutea.sql into your sql database
+
+
+## Home page
+
+type this address into your browser
+```
+localhost:8888/miutea/
+```
+
+### Admin page
+
+```
+localhost:8888/miutea/admin/
+```
+default administrator account will be
+```
+admin
+```
+```
+000000
+```
+
+## Built With
+
+* [Bootstrap](http://getbootstrap.com/)
+* [Jquery](https://jquery.com/)
+* [AdminLTE](https://adminlte.io/)
