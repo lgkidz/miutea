@@ -8,15 +8,8 @@ class get_feedback_model{
 		$this->con = $this->con->con;
 	}
 	
-	public function get_no_id(){
-		$statement = $this->con->prepare("SELECT ma_feedback FROM feedback");
-		$statement->execute();
-		$resultset = $statement->rowCount();
-		return $resultset;
-	}
-	
-	public function get_requested($head, $nor){
-		$query = "SELECT * FROM feedback ORDER BY ngay_lh LIMIT $head,$nor";
+	public function get_requested(){
+		$query = "SELECT * FROM feedback";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);

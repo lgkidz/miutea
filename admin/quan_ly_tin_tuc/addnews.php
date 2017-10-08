@@ -9,7 +9,7 @@
 		</tr>
 		<tr>
 			<td>Hình ảnh:</td>
-			<td><input type="file" name="img" required></td>
+			<td><input type="file" name="imgx" required></td>
 		</tr>
 		<tr>
 			<td>Nội dung</td>

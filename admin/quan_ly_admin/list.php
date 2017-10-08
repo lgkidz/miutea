@@ -1,23 +1,3 @@
-<div id="header" style="background-color: aqua;height: 50px;" class="container-fluid">
-	<div style="float: left;margin-right: 20px;">
-		<div style="float: left">
-			<img style="height: 40px;width: 40px;margin: 5px;" src="../../core_images/ava.png";>
-		</div>
-		<div style="float:left;margin-left: 15px;">
-			<h5 style="line-height:25px;"><?php echo $_SESSION['admin_name'];?></h5>
-		</div>
-		<div class="dropdown" style="float: left;margin: 20px 0 0 20px">
-  			<span class="glyphicon glyphicon-cog dropdown-toggle" type="button" data-toggle="dropdown">
-  			<span class="caret"></span></span>
-  			<ul class="dropdown-menu">
-   				<li data-toggle="modal" data-target="#inmd"><a href="#">Thêm 1 admin mới vào ban quàn trị</a></li>
-    			<li><a href="../adminpage.php">Quay Lại</a></li>
-    			<li><a href="../index.php" onClick="return confirm('Bạn thực sự muốn thoát?');">Đăng xuất</a></li>
-  			</ul>
-		</div>	
-	</div>
-	<a style="margin:10px;float: right;" href="../adminpage.php"><button type="button" class="btn btn-primary">Quay lại</button></a>
-</div>
 <div id="inmd" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -52,15 +32,26 @@
 
   </div>
 </div>
-<table class="table table-striped">
-	<tr>
-		<th>Mã admin</th>
-		<th>Tên đăng nhập</th>
-		<th>Tên admin</th>
-		<th>Chỉnh sửa</th>
-		<th style="color:red;">Nguy Hiểm!</th>
-	</tr>
-	<?php foreach($result as $ob){?>
+<div class="content-wrapper">
+<section class="content">
+
+<div class="box">
+<div class="box-header">
+              <h3 class="box-title">List of Administrators</h3>
+            </div>
+<div class="box-body">
+	<table id="example1" class="table table-bordered table-striped">
+		<thead>
+                <tr>
+                  <th>Mã admin</th>
+                  <th>Tên đăng nhập</th>
+                  <th>Tên admin</th>
+                  <th>Chỉnh sửa</th>
+                  <th style="color:red;">Nguy Hiểm!</th>
+                </tr>
+ 		</thead>
+        <tbody>
+        	<?php foreach($result as $ob){?>
 	<tr>
 		<td><?php echo $ob->ma_ad; ?></td>
 		<td><?php echo $ob->ten_dn_ad; ?></td>
@@ -141,4 +132,18 @@
 		</td>
 	</tr>
 	<?php } ?>
-</table>
+        </tbody>
+        <tfoot>
+                <tr>
+                  <th>Mã admin</th>
+                  <th>Tên đăng nhập</th>
+                  <th>Tên admin</th>
+                  <th>Chỉnh sửa</th>
+                  <th style="color:red;">Nguy Hiểm!</th>
+                </tr>
+        </tfoot>
+	</table>
+</div>
+</div>
+</section>
+</div>

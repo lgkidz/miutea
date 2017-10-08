@@ -1,4 +1,4 @@
-<div id="header" style="background-color: aqua;height: 50px;" class="container-fluid">
+<div id="header" style="background-color: #9E5618;height: 50px;color:#FFFEEB;" class="container-fluid">
 	<div style="float: left;margin-right: 20px;">
 		<div style="float: left">
 			<img style="height: 40px;width: 40px;margin: 5px;" src="../../core_images/ava.png";>

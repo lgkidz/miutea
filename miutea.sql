@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 01, 2017 lúc 05:28 PM
+-- Thời gian đã tạo: Th10 08, 2017 lúc 08:00 PM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -42,7 +42,8 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`ma_ad`, `ten_dn_ad`, `mat_khau`, `ten_ad`) VALUES
 (-1, 'admin', '000000', 'admin_clone'),
 (4, 'e', 'xxxxxx', 'clone'),
-(5, 'lgkidz', '111111', 'máº¡nh');
+(5, 'lgkidz', '111111', 'máº¡nh'),
+(6, 'test', '111111', 'test');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,7 @@ CREATE TABLE `donhang` (
   `ngay_dh` datetime NOT NULL,
   `noi_giao` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sdt` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `trang_thai` bit(1) NOT NULL,
+  `trang_thai` tinyint(4) NOT NULL,
   `ma_nv` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -107,7 +108,7 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
-(1, 'nguyễn thị A', '2017-10-17 02:07:15', 'cầu giấy', '001002', b'1111111111111111111111111111111', -1);
+(1, 'nguyễn thị A', '2017-10-17 02:07:15', 'cầu giấy', '001002', 1, -1);
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,11 @@ CREATE TABLE `thanhvien` (
 
 INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh`, `ten_dn_tv`, `mat_khau_tv`) VALUES
 (1, 'thằng này ko cần tên', '001', '@', '@', b'1111111111111111111111111111111', 'tv1', '000000'),
-(2, 'thành viên', '000001', 'aa', 'aaaas@a', b'1111111111111111111111111111111', 'tv2', '000000');
+(2, 'thành viên', '000001', 'aa', 'aaaas@a', b'1111111111111111111111111111111', 'tv2', '000000'),
+(3, 'abc', '1122553', 'á', 'fasf', b'1111111111111111111111111111111', 'áadga', '000000'),
+(4, 'akshbfahkg', '22', 'dzg ha n', 'okay', b'1111111111111111111111111111111', 'umok', '222222'),
+(5, 'newone', '2222', 'asdhn', 'manh', b'1111111111111111111111111111111', 'GG', '000000'),
+(6, 'josh', '3333333', 'xx', 'xx', b'1111111111111111111111111111111', 'josh', '000000');
 
 -- --------------------------------------------------------
 
@@ -230,7 +235,8 @@ CREATE TABLE `tintuc` (
 --
 
 INSERT INTO `tintuc` (`ma_tin`, `tieu_de`, `noi_dung`, `gio_dang`, `hinh_anh`) VALUES
-(1, 'this is a cup of tea!', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-03 00:00:00', 'cupoftea.png');
+(1, 'this is a cup of tea!', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-03 00:00:00', '../../news_images/cupoftea.png'),
+(7, 'edited', 'edited', '2017-10-02 11:16:51', '../../news_images/MiuTea.png');
 
 -- --------------------------------------------------------
 
@@ -252,8 +258,8 @@ CREATE TABLE `trasua` (
 --
 
 INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
-(7, 1, 'trà loại test -1', 100, 'cupoftea.png', 'lorem'),
-(8, -1, 'trà loại test đặc biệt 1', 222222, 'cupoftea.png', 'lorem ispum');
+(8, -1, 'trà loại test đặc biệt 1', 222222, 'cupoftea.png', 'lorem ispum'),
+(17, -1, 'tên', 1220, 'cupoftea.png', 'mô tả');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -330,7 +336,7 @@ ALTER TABLE `trasua`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT cho bảng `danhgiasp`
 --
@@ -360,17 +366,17 @@ ALTER TABLE `nhanvien`
 -- AUTO_INCREMENT cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT cho bảng `tintuc`
 --
 ALTER TABLE `tintuc`
-  MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT cho bảng `trasua`
 --
 ALTER TABLE `trasua`
-  MODIFY `ma_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ma_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
@@ -382,12 +388,6 @@ ALTER TABLE `chitietdonhang`
   ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`ma_dh`) REFERENCES `donhang` (`ma_dh`);
 
 --
--- Các ràng buộc cho bảng `danhgiasp`
---
-ALTER TABLE `danhgiasp`
-  ADD CONSTRAINT `danhgiasp_ibfk_1` FOREIGN KEY (`ma_ts`) REFERENCES `trasua` (`ma_ts`);
-
---
 -- Các ràng buộc cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
@@ -397,8 +397,7 @@ ALTER TABLE `nhanvien`
 -- Các ràng buộc cho bảng `trasua`
 --
 ALTER TABLE `trasua`
-  ADD CONSTRAINT `trasua_ibfk_1` FOREIGN KEY (`ma_loai_ts`) REFERENCES `loaitrasua` (`ma_loai_ts`),
-  ADD CONSTRAINT `trasua_ibfk_2` FOREIGN KEY (`ma_ts`) REFERENCES `chitietdonhang` (`ma_ts`);
+  ADD CONSTRAINT `trasua_ibfk_1` FOREIGN KEY (`ma_loai_ts`) REFERENCES `loaitrasua` (`ma_loai_ts`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

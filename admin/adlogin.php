@@ -14,7 +14,7 @@
 		$_SESSION["admin_name"] = $inid;
 		$_SESSION["admin_id_no"] = $rert->ma_ad;
 		$_SESSION["legal"] = 1;
-		header("location: adminpage.php");
+		header("location: adminpage2.php");
 	}
 	else{
 		header("location: index.php?err=1");

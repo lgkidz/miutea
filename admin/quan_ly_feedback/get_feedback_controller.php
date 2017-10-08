@@ -7,20 +7,13 @@ class get_feedback_controller{
 		$this->model = new get_feedback_model();
 	}
 	
-	public function get_requested($page){
-		$head = ($page-1)*5;
-		$nor = 5;
-		$resultset = $this->model->get_requested($head,$nor);
+	public function get_requested(){
+		$resultset = $this->model->get_requested();
 		include("main.php");
 	}
-	
-	public function get_nof(){
-		$number_of_feedback = $this->model->get_no_id();
-		return $number_of_feedback;
-	}
-	
-	public function invoke(){
-		$this->get_requested(1);
+
+	public function process(){
+		$this->get_requested();
 	}
 }
 ?>
