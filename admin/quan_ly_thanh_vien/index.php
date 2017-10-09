@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin</title>
+  <title>Members</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -74,7 +74,7 @@
               </li>
               <li class="user-footer">
                 <div class="pull-left">
-                  <a data-toggle="modal" data-target="#inmd" class="btn btn-default btn-flat">Add an Admin</a>
+                  <a data-toggle="modal" data-target="#inmd" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 
                 <div class="pull-right">
@@ -131,8 +131,8 @@
             <i class="fa fa-cubes"></i> <span>Quản lý mặt hàng</span>
           </a>
         </li>
-        <li>
-          <a href="../quan_ly_thanh_vien/">
+        <li class="active">
+          <a href="#">
             <i class="fa fa-male"></i> <span>Quản lý Thành viên</span>
           </a>
         </li>
@@ -151,8 +151,8 @@
             <i class="fa fa-comments"></i> <span>Quản lý feedback</span>
           </a>
         </li>
-        <li class="active">
-          <a href="#">
+        <li>
+          <a href="../quan_ly_admin/">
             <i class="fa fa-group"></i> <span>Quản lý admin</span>
           </a>
         </li>
@@ -163,8 +163,8 @@
 
   												<!-- Content Wrapper. Contains page content -->
 <?php
-	include("qla_controller.php");
-	$ctrl = new qla_controller();
+	include("mem_controller.php");
+	$ctrl = new mem_controller();
 	$ctrl->process();
 ?>
 											<!-- /.content-wrapper -->
@@ -208,7 +208,7 @@
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
+<script src="../dist/js/main.js"></script>
 <!-- page script -->
 <script>
   $(function () {

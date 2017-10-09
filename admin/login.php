@@ -43,18 +43,18 @@
 
     <form action="adlogin.php" method="post">
       <div class="form-group has-feedback">
-        <input class="form-control" name="adid" type="text" placeholder="Tên đăng nhập" required <?php if(isset($_COOKIE["id"])){echo "value='{$_COOKIE['id']}'";} ?>>
+        <input class="form-control" name="adid" type="text" placeholder="Tên đăng nhập" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input name="adpass" type="password" pattern=".{6,}"   required title="Mật khẩu ít nhất 6 ký tự" class="form-control" placeholder="Password">
+        <input name="adpass" type="password" pattern=".{6,}"   required title="Mật khẩu ít nhất 6 ký tự" class="form-control" placeholder="Password" >
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox" name="remember"> Remember Me
+              <input type="checkbox" name="remember" value="1"> Remember Me
             </label>
           </div>
         </div>

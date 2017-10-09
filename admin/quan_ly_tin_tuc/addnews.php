@@ -1,23 +1,34 @@
-<center>
-	<form action="index.php?action=add" method="post" enctype="multipart/form-data">
-
-	<h2>Thêm tin mới</h2>
-	<table class="table">
-		<tr>
-			<td>Tiêu đề:</td>
-			<td><input class="aff" type="text" name="title" placeholder="Tiêu đề" required></td>
-		</tr>
-		<tr>
-			<td>Hình ảnh:</td>
-			<td><input type="file" name="imgx" required></td>
-		</tr>
-		<tr>
-			<td>Nội dung</td>
-			<td><textarea class="aff" name="body" placeholder="Nội dung" required></textarea></td>
-		</tr>
-		<tr>
-			<td colspan="2"><input class="btn btn-primary" type="submit" name="newsubmit"></td>
-		</tr>
-	</table>
-	</form>
-</center>
+<div class="box box-primary">
+            <form action="?action=add" method="post" enctype="multipart/form-data">
+            <div class="box-header with-border">
+              <h3 class="box-title">Viêt bài mới</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+			<div class="form-group">
+                    <label>Tiêu đề</label>
+                    <input type="text" class="form-control" name="title" placeholder="Tiêu đề" required>
+              </div>
+              <div class="form-group">
+                    <textarea id="compose-textarea" class="form-control" style="height: 300px" name="body" required>
+                      
+                    </textarea>
+              </div>
+              <div class="form-group">
+                <div class="btn btn-default btn-file">
+                  <i class="fa fa-paperclip"></i> Hình ảnh
+                  <input type="file" name="img" required>
+                </div>
+                <p class="help-block">Max. 8MB</p>
+              </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <div class="pull-right">
+                <button type="submit" name="subnew" class="btn btn-primary"><i class="fa fa-pencil"></i> Send</button>
+              </div>
+              <button type="reset" class="btn btn-default"><i class="fa fa-times"></i> Discard</button>
+            </div>
+            <!-- /.box-footer -->
+            </form>
+</div>

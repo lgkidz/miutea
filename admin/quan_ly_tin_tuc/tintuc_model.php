@@ -15,8 +15,8 @@ class tintuc_model{
 		return $resultset;
 	}
 	
-	public function lastnews($head, $nor){
-		$query = "SELECT * FROM tintuc ORDER BY gio_dang LIMIT $head,$nor";
+	public function lastnews(){
+		$query = "SELECT * FROM tintuc ORDER BY gio_dang";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);

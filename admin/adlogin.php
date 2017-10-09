@@ -14,6 +14,10 @@
 		$_SESSION["admin_name"] = $inid;
 		$_SESSION["admin_id_no"] = $rert->ma_ad;
 		$_SESSION["legal"] = 1;
+		if(!empty($_POST["remember"])){
+			$year = time() + 31536000;
+			setcookie('id', $inid, $year);
+		}
 		header("location: adminpage2.php");
 	}
 	else{

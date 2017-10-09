@@ -10,66 +10,72 @@
     <section class="content">
       <!-- Info boxes -->
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-            <div class="info-box-content">
-              <span class="info-box-text">CPU Traffic</span>
-              <span class="info-box-number">5<small>%</small></span>
+              <p>Bounce Rate</p>
             </div>
-            <!-- /.info-box-content -->
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3><?php echo $nomembers; ?></h3>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">41,410</span>
+              <p>Member Registrations</p>
             </div>
-            <!-- /.info-box-content -->
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="quan_ly_thanh_vien/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
         <!-- /.col -->
 
         <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3><?php echo $noorder;?></h3>
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-            <div class="info-box-content">
-             <?php
-				$sales = 0;
-				foreach($order as $o){
-					$sales += $o->so_luong;
-				}
-			 ?>
-              <span class="info-box-text">Sales</span>
-              <span class="info-box-number"><?php echo $sales ?></span>
+              <p>Orders</p>
             </div>
-            <!-- /.info-box-content -->
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="don_hang/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3><?php
+				$sols = 0;
+				foreach($sold as $o){
+					$sols += $o->so_luong;
+				}
+				echo $sols;
+			 ?></h3>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Members</span>
-              <span class="info-box-number"><?php echo $nomembers; ?></span>
+              <p>Sold products</p>
             </div>
-            <!-- /.info-box-content -->
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="don_hang/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
-          <!-- /.info-box -->
         </div>
         <!-- /.col -->
       </div>
@@ -79,7 +85,7 @@
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Monthly Recap Report</h3>
+              <h3 class="box-title">Phần này nhìn cho đẹp thôi</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>

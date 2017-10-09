@@ -15,6 +15,13 @@ class controller{
 		return $this->model->get_no_member();
 	}
 	
+	public function get_no_sold(){
+		return $this->model->get_no_sold();
+	}
+	public function get_no_order(){
+		return $this->model->get_no_order();
+	}
+	
 	public function getMember(){
 		return $this->model->getMember();
 	}
@@ -28,6 +35,8 @@ class controller{
 		$nomembers = $this->get_no_member();
 		$member = $this->getMember();
 		$order = $this->getOrders();
+		$noorder = $this->get_no_order();
+		$sold = $this->get_no_sold();
 		include("dashboard.php");
 	}
 }

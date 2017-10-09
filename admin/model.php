@@ -23,6 +23,21 @@ class model{
 		return $resultset;
 	}
 	
+	public function get_no_sold(){
+		$query = "SELECT so_luong FROM chitietdonhang";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
+	public function get_no_order(){
+		$statement = $this->con->prepare("SELECT ma_dh FROM donhang");
+		$statement->execute();
+		$resultset = $statement->rowCount();
+		return $resultset;
+	}
+	
 	public function getMember(){
 		$query = "SELECT * FROM thanhvien LIMIT 0,8";
 		$statement = $this->con->prepare($query);

@@ -21,7 +21,7 @@ class tintuc_controller{
 	
 	public function lastnews(){
 		$resultset = $this->model->lastnews();
-		include("");
+		include("main.php");
 	}
 	
 	public function addnews($t,$b,$img){
@@ -43,7 +43,7 @@ class tintuc_controller{
 		else{
 			$action = "none";
 		}
-		if($action == "add" && isset($_POST["newsubmit"])){
+		if($action == "add" && isset($_POST["subnew"])){
 			$t = $_POST["title"];
 			$b = $_POST["body"];
 			$target_dir = "../../news_images/";
@@ -62,8 +62,11 @@ class tintuc_controller{
     		}
 			// Check file size
 			if (file_exists($target_file)) {
-    			echo "Sorry, file already exists.";
-    			$uploadOk = 0;
+    			$uploadOk = 2;
+			}
+			if ($_FILES["img"]["size"] > 500000) {
+    		echo "Sorry, your file is too large.";
+    		$uploadOk = 0;
 			}
 			// Allow certain file formats
 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
@@ -75,10 +78,12 @@ class tintuc_controller{
     			echo "Sorry, your file was not uploaded.";
 				// if everything is ok, try to upload file
 			}
+			else if($uploadOk == 2){
+				$this->addnews($t,$b,$target_file);
+			}
 			else {
     			if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
         			$this->addnews($t,$b,$target_file);
-					header("location: index.php");
     			}
 				else {
         			echo "Sorry, there was an error uploading your file.";
@@ -91,13 +96,12 @@ class tintuc_controller{
 			$t = $_POST["etitle"];
 			$b = $_POST["ebody"];
 			$this->editnews($id,$t,$b);
-			header("location: index.php");
 		}
 		else if($action == "delete"){
 			$id = $_GET["id"];
 			$this->delete($id);
-			header("location: index.php");
 		}
+		$this->lastnews();
 	}
 }
 ?>

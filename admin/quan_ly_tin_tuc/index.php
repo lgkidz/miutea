@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin</title>
+  <title>Tin tức</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -18,13 +18,14 @@
   <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="../bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
   <!-- Google Font -->
@@ -74,7 +75,7 @@
               </li>
               <li class="user-footer">
                 <div class="pull-left">
-                  <a data-toggle="modal" data-target="#inmd" class="btn btn-default btn-flat">Add an Admin</a>
+                  <a data-toggle="modal" data-target="#inmd" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 
                 <div class="pull-right">
@@ -141,8 +142,8 @@
             <i class="fa fa-shopping-cart"></i> <span>Đơn Hàng</span>
           </a>
         </li>
-        <li>
-          <a href="../quan_ly_tin_tuc/">
+        <li class="active">
+          <a href="#">
             <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
           </a>
         </li>
@@ -151,8 +152,8 @@
             <i class="fa fa-comments"></i> <span>Quản lý feedback</span>
           </a>
         </li>
-        <li class="active">
-          <a href="#">
+        <li>
+          <a href="../quan_ly_admin/">
             <i class="fa fa-group"></i> <span>Quản lý admin</span>
           </a>
         </li>
@@ -163,8 +164,8 @@
 
   												<!-- Content Wrapper. Contains page content -->
 <?php
-	include("qla_controller.php");
-	$ctrl = new qla_controller();
+	include("tintuc_controller.php");
+	$ctrl = new tintuc_controller();
 	$ctrl->process();
 ?>
 											<!-- /.content-wrapper -->
@@ -205,15 +206,24 @@
 <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../plugins/iCheck/icheck.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
+<script src="../dist/js/main.js"></script>
 <!-- page script -->
 <script>
   $(function () {
     $('#example1').DataTable();
   })
+</script>
+<script>
+  $(function () {
+    //Add text editor
+    $("#compose-textarea").wysihtml5();
+  });
 </script>
 </body>
 </html>
