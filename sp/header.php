@@ -13,9 +13,9 @@
         <li><a href="#">Giới thiệu</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Trà sữa</a> </li>
-            <li><a href="#">Kem cheese</a> </li>
-            <li><a href="#">Đá bào</a> </li>
+            <li><a href="trasua.php">Trà sữa</a> </li>
+            <li><a href="kemcheese.php">Kem cheese</a> </li>
+            <li><a href="dabao.php">Đá bào</a> </li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Khuyến mãi</a> </li>
           </ul>

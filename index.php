@@ -9,13 +9,19 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<?php include('includes/header.php'); ?>
     
- 	<?php include('includes/content index.php'); ?>
-  	
+    <div id="content">
+    	<?php include('includes/content index.php'); ?>
+	
+        <?php include('includes/dathang.php');?>
+    </div>
+  
     <?php include('includes/footer.php'); ?>
+    
 <script src="includes/js/jquery-1.11.3.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="includes/js/bootstrap.js"></script>

@@ -13,7 +13,7 @@
 <body>
 	<?php include('header.php'); ?>
 
-  	<?php include('content-ts.php'); ?>
+  	<?php include('content-db.php'); ?>
     
     <?php include('footer.php'); ?>
 <script src="../includes/js/jquery-1.11.3.min.js"></script> 
