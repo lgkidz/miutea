@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                   <label>Mô tả</label>
-                  <input type="text" name="id" class="form-control" placeholder="Nhập mô tả sản phẩm" required>
+                  <input type="text" name="id" class="form-control" placeholder="Nhập mô tả sản phẩm">
                 </div>
               </div>
               <!-- /.box-body -->

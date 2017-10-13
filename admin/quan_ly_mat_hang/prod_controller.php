@@ -67,8 +67,7 @@ class prod_controller{
     		}
 			// Check file size
 			if (file_exists($target_file)) {
-    			echo "Sorry, file already exists.";
-    			$uploadOk = 0;
+    			$uploadOk = 2;
 			}
 			// Allow certain file formats
 			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
@@ -76,7 +75,10 @@ class prod_controller{
     			$uploadOk = 0;
 			}
 			// Check if $uploadOk is set to 0 by an error
-			if ($uploadOk == 0) {
+			if($uploadOk == 2){
+				$this->insert($t,$ml,$i,$g,$mt);
+			}
+			else if ($uploadOk == 0) {
     			echo "Sorry, your file was not uploaded.";
 				// if everything is ok, try to upload file
 			}
@@ -90,7 +92,6 @@ class prod_controller{
 			}
 			
 				$this->listAll();
-			echo "zzzzzzzzzzzzzzzzzzzzzzzzzzzzz $i $t $ml $g $mt";
 				break;
 			}
 			case "delete":{
