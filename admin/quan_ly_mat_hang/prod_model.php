@@ -16,6 +16,30 @@ class prod_model{
 		return $resultset;
 	}
 	
+	public function listts(){
+		$query = "SELECT * FROM `trasua` INNER JOIN loaitrasua ON trasua.ma_loai_ts = loaitrasua.ma_loai_ts WHERE loaitrasua.ma_loai_ts = 2";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
+	public function listkc(){
+		$query = "SELECT * FROM `trasua` INNER JOIN loaitrasua ON trasua.ma_loai_ts = loaitrasua.ma_loai_ts WHERE loaitrasua.ma_loai_ts = 4";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
+	public function listdb(){
+		$query = "SELECT * FROM `trasua` INNER JOIN loaitrasua ON trasua.ma_loai_ts = loaitrasua.ma_loai_ts WHERE loaitrasua.ma_loai_ts = 3";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
 	public function getmal(){
 		$query = "SELECT * FROM loaitrasua";
 		$statement = $this->con->prepare($query);

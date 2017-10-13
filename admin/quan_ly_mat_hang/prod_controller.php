@@ -9,6 +9,9 @@ class prod_controller{
 	
 	public function listAll(){
 		$result = $this->model->listAll();
+		$ts = $this->model->listts();
+		$kc = $this->model->listkc();
+		$db = $this->model->listdb();
 		$ml = $this->model->getmal();
 		include("main.php");
 	}

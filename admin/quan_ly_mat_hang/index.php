@@ -212,7 +212,7 @@
 <!-- page script -->
 <script>
   $(function () {
-    $('#example1').DataTable();
+    $('.tablex').DataTable();
   })
 </script>
 </body>
