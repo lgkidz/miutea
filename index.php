@@ -51,37 +51,14 @@
       <script>
         $(document).ready(function () {
 
-            $('.center').slick({
+            $('.slider').slick({
                 dots:true,
-                centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
+                infinite: true,
+  				slidesToShow: 3,
+  				slidesToScroll: 2,
+				centerPadding: '60px',
 				autoplay: true,
-				autoplaySpeed: 2000,
-                responsive: [
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-						  autoplay: true,
-						   autoplaySpeed: 2000,
-                          slidesToShow: 3
-                      }
-                  },
-                  {
-                      breakpoint: 480,
-                      settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-						  autoplay: true,
-						    autoplaySpeed: 2000,
-                          slidesToShow: 1
-                      }
-                  }
-                ]
+  				autoplaySpeed: 2000,
             });
             //-------------------------------------------
             //--------------------------------------------
@@ -116,7 +93,7 @@
     	<?php include('includes/content index.php'); ?>
     <div class="bestseller">
     	    <h1 class="title">Bestseller</h1>
-        <div class="slider center" role="toolbar">
+        <div class="slider" role="toolbar">
            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
             <div><img src="Content/Images/img20170522072447288.jpg" /></div>
             <div><img src="Content/Images/img20170522072447288.jpg" /></div>
