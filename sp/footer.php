@@ -1,7 +1,14 @@
 <footer>
-  <a class="up-arrow" href="#"data-toggle="tooltip" title="TO TOP">
+<a class="up-arrow" id="to_top" data-toggle="tooltip" title="Go to top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
+  <script>
+	  $('#to_top').click(function(){
+    $("html, body").animate({
+        scrollTop: 0
+    }, 500);
+});
+  </script>
   <div id="contact" class="">
   <div class="row">
     <div class="col-sm-6">

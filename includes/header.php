@@ -15,7 +15,7 @@
           <ul class="dropdown-menu">
             <li><a href="sp/trasua.php">Trà sữa</a> </li>
             <li><a href="sp/kemcheese.php">Kem cheese</a> </li>
-            <li><a href="#">Đá bào</a> </li>
+            <li><a href="sp/dabao.php">Đá bào</a> </li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Khuyến mãi</a> </li>
           </ul>
