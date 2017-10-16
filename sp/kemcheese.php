@@ -15,7 +15,11 @@
 <body>
 	<?php include('header.php'); ?>
 
-  	<?php include('content-kc.php'); ?>
+  	<?php
+	include('kc_controller.php');
+	$controller = new kc_controller();
+	$controller->process();
+	?>
     
     <?php include('footer.php'); ?>
 </body>

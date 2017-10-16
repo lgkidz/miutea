@@ -15,7 +15,11 @@
 <body>
 	<?php include('header.php'); ?>
 
-  	<?php include('content-ts.php'); ?>
+  	<?php
+	include('ts_controller.php');
+	$controller = new ts_controller();
+	$controller->process();
+	?>
     
     <?php include('footer.php'); ?>
 </body>

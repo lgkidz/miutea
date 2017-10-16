@@ -15,7 +15,11 @@
 <body>
 	<?php include('header.php'); ?>
 
-  	<?php include('content-db.php'); ?>
+  	<?php
+	include('db_controller.php');
+	$controller = new db_controller();
+	$controller->process();
+	?>
     
     <?php include('footer.php'); ?>
 </body>
