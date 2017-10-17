@@ -68,23 +68,20 @@
     <div class="bestseller">
     	    <h1 class="title">Bestseller</h1>
         <div class="slider" role="toolbar">
-           <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
-            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+           <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
+            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
         </div>
     </div>
 	<div class ="dathang">

@@ -17,7 +17,7 @@
       <p><span class="glyphicon glyphicon-phone"></span>     09xxxxxxxx</p>
       <p><span class="glyphicon glyphicon-envelope"></span>    miutea@gmail.com</p>
       <br>
-      <img src="images/logo.png" height="100"/>
+      <a href="../"><img src="images/logo.png" height="100"/></a>
     </div>
         <div class="col-sm-6">
 <h4 align="left">Theo dõi chúng tôi để nhận được những điều thú vị</h4>

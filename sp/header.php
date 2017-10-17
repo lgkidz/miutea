@@ -1,4 +1,18 @@
-<nav class="navbar navbar-default">
+  <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+	  .navbar{
+		  z-index: 99;
+	  }
+  </style>
+ <nav class="navbar navbar-default"  data-spy="affix" data-offset-top="0">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

@@ -13,26 +13,26 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="http://via.placeholder.com/1920x850" alt="Los Angeles">
+        <img src="http://via.placeholder.com/1920x850" alt="Trà sữa">
         <div class="carousel-caption">
-          <h3>Los Angeles</h3>
-          <p>LA is always so much fun!</p>
+          <h3>Trà sữa</h3>
+          <p>Yayayayay Trà sữa</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="http://via.placeholder.com/1920x850" alt="Chicago">
+        <img src="http://via.placeholder.com/1920x850" alt="Đá bào">
         <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago!</p>
+          <h3>Đá bào</h3>
+          <p>Icy đá bào!!</p>
         </div>
       </div>
     
       <div class="item">
-        <img src="http://via.placeholder.com/1920x850" alt="New York">
+        <img src="http://via.placeholder.com/1920x850" alt="Kem Cheese">
         <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
+          <h3>Kem Cheese</h3>
+          <p>Kem Cheese is love, Kem Cheese is life</p>
         </div>
       </div>
   
