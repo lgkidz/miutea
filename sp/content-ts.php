@@ -1,17 +1,8 @@
 <!-- HEADER -->
 <header>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dicta, cupiditate consequatur necessitatibus quos libero eius ipsum qui sit molestiae.</p>
-          <p>&nbsp;</p>
-          <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Xem thêm</a> </p>
-        </div>
-      </div>
+    <div class="container-fluid">
+          <img src="../core_images/content.jpg">
     </div>
-  </div>
 </header>
 <!-- / HEADER --> 
 <?php
