@@ -13,7 +13,7 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="http://via.placeholder.com/1920x850" alt="Trà sữa">
+        <img src="../core_images/content.jpg" alt="Trà sữa">
         <div class="carousel-caption">
           <h3>Trà sữa</h3>
           <p>Yayayayay Trà sữa</p>
@@ -21,7 +21,7 @@
       </div>
 
       <div class="item">
-        <img src="http://via.placeholder.com/1920x850" alt="Đá bào">
+        <img src="../core_images/content.jpg" alt="Đá bào">
         <div class="carousel-caption">
           <h3>Đá bào</h3>
           <p>Icy đá bào!!</p>
@@ -29,7 +29,7 @@
       </div>
     
       <div class="item">
-        <img src="http://via.placeholder.com/1920x850" alt="Kem Cheese">
+        <img src="../core_images/content.jpg" alt="Kem Cheese">
         <div class="carousel-caption">
           <h3>Kem Cheese</h3>
           <p>Kem Cheese is love, Kem Cheese is life</p>
