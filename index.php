@@ -20,15 +20,12 @@
 		}
 
         .slider {
-            width: 800px;
+			width: 1200px;
             margin: 0 auto;
         }
         .title {
             text-align: center;
             margin-top: 50px;
-        }
-        .slick-dots li button:before {
-            font-size: 40px;
         }
 
         .slider img {
@@ -40,8 +37,8 @@
             padding-bottom: 15px;
             position: relative;
             text-align: center;
-			height: 250px;
-			width: 180px;
+			height: 300px;
+			width: 240px;
 			
         }
     </style>
@@ -52,35 +49,12 @@
         $(document).ready(function () {
 
             $('.slider').slick({
-                dots:true,
                 infinite: true,
-  				slidesToShow: 3,
-  				slidesToScroll: 2,
+  				slidesToShow: 5,
+  				slidesToScroll: 1,
 				centerPadding: '60px',
 				autoplay: true,
-  				autoplaySpeed: 2000,
-            });
-            //-------------------------------------------
-            //--------------------------------------------
-
-            //----------------------------------------
-            //----------------------------------------------
-            var slideIndex = $('.add-remove >div').length;
-            $('.add-remove').slick({
-                dots: true,
-                slidesToShow: 3,
-                slidesToScroll: 3
-            });
-            $('.js-add-slide').on('click', function () {
-                slideIndex++;
-                $('.add-remove').slick('slickAdd', '<div><h1>' + slideIndex + '</h1></div>');
-            });
-
-            $('.js-remove-slide').on('click', function () {
-                $('.add-remove').slick('slickRemove', slideIndex - 1);
-                if (slideIndex !== 0) {
-                    slideIndex--;
-                }
+  				autoplaySpeed: 1500,
             });
         });
     </script>
@@ -95,6 +69,16 @@
     	    <h1 class="title">Bestseller</h1>
         <div class="slider" role="toolbar">
            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
+            <div><img src="Content/Images/img20170522072447288.jpg" /></div>
             <div><img src="Content/Images/img20170522072447288.jpg" /></div>
             <div><img src="Content/Images/img20170522072447288.jpg" /></div>
             <div><img src="Content/Images/img20170522072447288.jpg" /></div>
