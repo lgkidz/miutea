@@ -4,25 +4,31 @@ if(isset($_POST["dangnhap"])){
 		$mdn = $_POST["maildangnhap"];
 	}
 	else{
-		$mdn = "";
+		$mdn = "n/a";
 	}
 	if(isset($_POST["dnpassword"])){
 		$pas = $_POST["dnpassword"];
 	}
 	else{
-		$pas ="NOT_AVAILABLE";
+		$pas ="n/a";
 	}
-	if($mdn == ""){
-		$pas ="NOT_AVAILABLE";
+	if($mdn == "n/a"){
+		$pas ="n/a";
 	}
-	$con = new PDO("mysql:host=localhost;dbname=miutea", "root", "");
+	include("../connection/connection.php");
+	$con = new connection();
+	$con = $con->con;
 	
 	$state = $con->prepare("SELECT * FROM thanhvien WHERE email='$mdn'");
 	$state->execute();
 	$rert = $state->fetch(PDO::FETCH_OBJ);
+	if($mdn == "n/a" || $pas == "n/a"){
+		header("location: ../dangnhap.php?loginerror=1");
+	}
 	if($rert->mat_khau_tv == $pas){
 		session_start();
 		$_SESSION["user_name"] = $rert->ten_tv;
+		$_SESSION["userlegal"] = true;
 		header("location: ../");
 	}
 	else{

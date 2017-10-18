@@ -1,7 +1,9 @@
 <?php
 	$inid = $_POST['adid'];
 	$inpass = $_POST['adpass'];
-	$con = new PDO("mysql:host=localhost;dbname=miutea", "root", "");
+	include("../connection/connection.php");
+	$con = new connection();
+	$con = $con->con;
 	
 	$state = $con->prepare("SELECT * FROM admin WHERE ten_dn_ad='$inid'");
 	$state->execute();
