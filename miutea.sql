@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2017 lúc 10:07 AM
+-- Thời gian đã tạo: Th10 18, 2017 lúc 05:00 PM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -267,8 +267,6 @@ CREATE TABLE `trasua` (
 --
 
 INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
-(7, 4, 'kem cheese test', 1220, 'cupoftea.png', 'mô tả'),
-(8, 3, 'đá bào test', 222222, 'cupoftea.png', 'lorem ispum'),
 (9, 2, 'Trà sữa 3Q', 31000, 'cupoftea.png', ''),
 (10, 2, 'Trà sữa Trân Châu', 26000, 'cupoftea.png', ''),
 (11, 2, 'Trà Sữa Trà Xanh Nhật Bản', 38000, 'cupoftea.png', ''),
