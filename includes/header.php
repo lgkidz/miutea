@@ -37,7 +37,19 @@
         <li><a href="#">Liên hệ</a> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="dangnhap.php">Đăng nhập</a> </li>
+       <?php
+		  if(isset($_SESSION["user_name"])){
+			  include("includes/user_button.php");
+		?>
+	  <?php	  
+		  }else{
+			
+		?>
+		<li><a href="dangnhap.php">Đăng nhập</a></li>
+	  <?php
+		  }
+		?>
+        
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
