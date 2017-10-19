@@ -1,15 +1,8 @@
-<!-- HEADER -->
-<header>
-    <div class="container-fluid">
+
+<div class="container-fluid">
+     <div class="container-fluid">
           <img src="../core_images/content.jpg">
     </div>
-</header>
-<!-- / HEADER --> 
-<?php
-	echo $n_o_p;
-?>
-<!--  SECTION-1 -->
-<section>
   <div class="row">
     <div class="col-lg-12 page-header text-center">
       <h2>KEM CHEESE</h2>
@@ -52,6 +45,7 @@
     </ul>
   </nav>
   </div>
+</div>
 </div>
   
   <!-- /container -->

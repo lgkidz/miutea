@@ -5,8 +5,8 @@
       width: 100%;
   }
 
-  .affix + .container-fluid {
-      padding-top: 70px;
+    .affix + .container-fluid {
+      padding-top: 50px;
   }
 	  .navbar{
 		  z-index: 99;

@@ -5,8 +5,8 @@
       width: 100%;
   }
 
-  .affix + .container-fluid {
-      padding-top: 70px;
+  .affix + #content {
+      padding-top: 50px;
   }
 	  .navbar{
 		  z-index: 99;
@@ -22,7 +22,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
+        <li><a href="index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
         <li><a href="#">Tin tức</a> </li>
         <li><a href="#">Giới thiệu</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
@@ -63,5 +63,4 @@
   </div>
   <!-- /.container-fluid --> 
 </nav>
-
 <!-- HEADER -->

@@ -13,27 +13,15 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="http://via.placeholder.com/2000x1300" alt="Trà sữa">
-        <div class="carousel-caption">
-          <h3>Trà sữa</h3>
-          <p>Yayayayay Trà sữa</p>
-        </div>
+        <img src="core_images/Slide-homepage-01.jpg" alt="Trà sữa">
       </div>
 
       <div class="item">
-        <img src="../core_images/Slide-homepage-01.jpg" alt="Đá bào">
-        <div class="carousel-caption">
-          <h3>Đá bào</h3>
-          <p>Icy đá bào!!</p>
-        </div>
+        <img src="core_images/Slide-homepage-02.jpg" alt="Đá bào">
       </div>
     
       <div class="item">
-        <img src="http://via.placeholder.com/2000x1300" alt="Kem Cheese">
-        <div class="carousel-caption">
-          <h3>Kem Cheese</h3>
-          <p>Kem Cheese is love, Kem Cheese is life</p>
-        </div>
+        <img src="core_images/Slide-homepage-03.jpg" alt="Kem Cheese">
       </div>
   
     </div>
