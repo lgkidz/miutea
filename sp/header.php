@@ -23,8 +23,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="../index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
-        <li><a href="#">Tin tức</a> </li>
-        <li><a href="#">Giới thiệu</a> </li>
+        <li><a href="../news/">Tin tức</a> </li>
+        <li><a href="../about/">Giới thiệu</a> </li>
         <li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="trasua.php">Trà sữa</a> </li>
@@ -34,7 +34,7 @@
             <li><a href="#">Khuyến mãi</a> </li>
           </ul>
         </li>
-        <li><a href="#">Liên hệ</a> </li>
+        <li><a href="../contact/">Liên hệ</a> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php

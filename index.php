@@ -68,7 +68,7 @@ session_start();
     <div id="content">
     	<?php include('includes/content index.php'); ?>
     <div class="bestseller">
-    	    <h1 class="title">Bestseller</h1>
+    	    <h1 class="title" style="padding-top: 20px;">Bestseller</h1>
         <div class="slider" role="toolbar">
            <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
             <div><a href="#"><img src="Content/Images/img20170522072447288.jpg" /></a></div>
