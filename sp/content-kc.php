@@ -11,7 +11,7 @@
   <div class="container text-center">
 	<?php foreach($result as $ob){ ?>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <div class="thumbnail"> <img style="height: 400px;width: 300px;" src="../core_images/<?php echo $ob->hinh_anh_ts;?>" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img style="height: 300px;width: 300px;" src="../core_images/<?php echo $ob->hinh_anh_ts;?>" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
 			<h4><?php echo $ob->ten_ts;?></h4>
           <span><?php echo $ob->gia_ts;?> VND</span>

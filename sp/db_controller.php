@@ -19,7 +19,7 @@ class db_controller{
 	
 	public function listTs($page,$pagination){
 		$n_o_p = $this->n_o_p();
-		$result = $this->model->getKc($page,$this->pagination);
+		$result = $this->model->getDb($page,$this->pagination);
 		include("content-db.php");
 	}
 	
