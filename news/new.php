@@ -68,6 +68,14 @@ h1 {
     }
 }
 </style>
+<?php
+	include("../connection/connection.php");
+	$con = new connection();
+	$con = $con->con;
+	$statement = $con->prepare("SELECT * FROM tintuc ORDER BY gio_dang LIMIT 0,4");
+	$statement->execute();
+	$news = $statement->fetchAll(PDO::FETCH_OBJ);
+?>
     <div class="Tintuc">
 <!-- MAIN (Center website) -->
 <div style="padding-top: 30px;" class="main">
@@ -76,42 +84,18 @@ h1 {
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
+ <?php foreach($news as $ob){ ?>
   <div class="column">
     <div class="content">
       <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.
+      <h3><?php echo $ob->tieu_de;?></h3>
+      <p><?php echo substr($ob->noi_dung,0,75);?> ...
 		<br>
 			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
     </div>
   </div>
-  <div class="column">
-    <div class="content">
-   <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.
-		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.
-		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-    <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.
-		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
-    </div>
-  </div>
+<?php } ?>
+
 <!-- END GRID -->
 </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 18, 2017 lúc 05:00 PM
+-- Thời gian đã tạo: Th10 21, 2017 lúc 04:19 PM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -218,11 +218,11 @@ INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh
 (4, 'akshbfahkg', '22', 'dzg ha n', 'okay', 1, 'umok', '222222'),
 (5, 'newone', '2222', 'asdhn', 'manh', 0, 'GG', '000000'),
 (6, 'josh', '3333333', 'xx', 'xx', 1, 'josh', '000000'),
-(7, 'tên', '7777', 'hà nội', 'lgkidz@gmail.com', 1, 'manh', 'manh123'),
 (8, 'tên nữa', '8888', 'HCM', 'xxx@gmail.com', 0, 'kakaa', '000000'),
 (9, 'tên tiếp thep', '5555555', 'laos', 'lol@gmai.com', 1, 'lololol', '0000000'),
 (10, 'tên thử', '641068', 'tôi là ai? đây là đâu?', 'email@email.com', 0, 'emailemail', '000000'),
-(11, 'tên cuối', '33252544', 'sao hỏa', 'mars@nasa.gov', 1, 'alien', '111111');
+(11, 'tên cuối', '33252544', 'sao hỏa', 'mars@nasa.gov', 1, 'alien', '111111'),
+(14, 'Mạnh', '', '', 'lgkidz@gmail.com', 0, '', '000000');
 
 -- --------------------------------------------------------
 
@@ -244,8 +244,9 @@ CREATE TABLE `tintuc` (
 
 INSERT INTO `tintuc` (`ma_tin`, `tieu_de`, `noi_dung`, `gio_dang`, `hinh_anh`) VALUES
 (1, 'this is a cup of tea!', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-03 00:00:00', '../../news_images/cupoftea.png'),
-(7, 'edited', 'edited', '2017-10-02 11:16:51', '../../news_images/MiuTea.png'),
-(10, 'thử xem thế nào', '<p><b>đây là dòng in đậm</b><br></p>', '2017-10-09 23:31:19', '../../news_images/MiuTea.png');
+(7, 'edited', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-02 11:16:51', '../../news_images/MiuTea.png'),
+(10, 'thử xem thế nào', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-09 23:31:19', '../../news_images/MiuTea.png'),
+(11, 'thử unicode', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-18 23:59:12', '../../news_images/MiuTea.png');
 
 -- --------------------------------------------------------
 
@@ -267,44 +268,44 @@ CREATE TABLE `trasua` (
 --
 
 INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
-(9, 2, 'Trà sữa 3Q', 31000, 'cupoftea.png', ''),
-(10, 2, 'Trà sữa Trân Châu', 26000, 'cupoftea.png', ''),
-(11, 2, 'Trà Sữa Trà Xanh Nhật Bản', 38000, 'cupoftea.png', ''),
-(12, 2, 'Trà Sữa Darjeeling', 26000, 'cupoftea.png', ''),
-(13, 2, 'Trà Sữa Sen', 29000, 'cupoftea.png', ''),
-(14, 2, 'Trà Sữa Dâu Tây', 26000, 'cupoftea.png', ''),
-(15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, 'cupoftea.png', ''),
-(16, 2, 'Trà Sữa Ô Long', 26000, 'cupoftea.png', ''),
-(17, 2, 'Trà Sữa Toffee Nuts Sủi Bọt', 38000, 'cupoftea.png', ''),
-(18, 2, 'Trà Sữa Vani', 29000, 'cupoftea.png', ''),
-(19, 2, 'Trà Sữa Hạnh Nhân', 29000, 'cupoftea.png', ''),
-(20, 2, 'Trà Sữa Mật Ong', 29000, 'cupoftea.png', ''),
-(21, 2, 'Trà Sữa Alisan', 29000, 'cupoftea.png', ''),
-(22, 2, 'Trà Sữa Quan Âm', 29000, 'cupoftea.png', ''),
-(23, 2, 'Trà Sữa Ceylon', 23000, 'cupoftea.png', ''),
-(24, 2, 'Trà Sữa Hoa Lục Trà', 29000, 'cupoftea.png', ''),
-(25, 2, 'Trà Sữa Vải', 23000, 'cupoftea.png', ''),
-(26, 2, 'Trà Sữa Gạo Nâu', 29000, 'cupoftea.png', ''),
-(27, 2, 'Trà Sũa Trà Xanh', 26000, 'cupoftea.png', ''),
-(28, 3, 'Kem Tuyết Trà Xanh Nhật Bản', 41000, 'cupoftea.png', ''),
-(29, 3, 'Kem Tuyết Xoài', 28000, 'cupoftea.png', ''),
-(30, 3, 'Kem Tuyết Dâu', 28000, 'cupoftea.png', ''),
-(31, 3, 'Kem Tuyết Vải', 28000, 'cupoftea.png', ''),
-(32, 3, 'Kem Tuyết Chanh Dây', 28000, 'cupoftea.png', ''),
-(33, 3, 'Kem Tuyết Sôcôla', 35000, 'cupoftea.png', ''),
-(34, 3, 'Kem Tuyết Đào', 35000, 'cupoftea.png', ''),
-(35, 3, 'Kem Tuyết Caramen', 38000, 'cupoftea.png', ''),
-(36, 4, 'Trà Tươi Sủi Bọt', 35000, 'cupoftea.png', ''),
-(37, 4, 'Sủi Bọt Lá Cây', 38000, 'cupoftea.png', ''),
-(38, 4, 'Trà Alisan Sủi Bọt', 38000, 'cupoftea.png', ''),
-(39, 4, 'Trà Gạo Nâu Sủi Bọt', 38000, 'cupoftea.png', ''),
-(40, 4, 'Trà Quan Âm Sủi Bọt', 38000, 'cupoftea.png', ''),
-(41, 4, 'Trà Ô Long Sủi Bọt', 38000, 'cupoftea.png', ''),
-(42, 4, 'Trà 4 Mùa Xuân Sủi Bọt', 38000, 'cupoftea.png', ''),
-(43, 4, 'Matcheese', 49000, 'cupoftea.png', ''),
-(44, 4, 'Trà Bí Đao Sủi Bọt', 33000, 'cupoftea.png', ''),
-(45, 4, 'Trà Xanh Sủi Bọt', 35000, 'cupoftea.png', ''),
-(46, 4, 'Hồng Trà Sủi Bọt', 35000, 'cupoftea.png', '');
+(9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', ''),
+(10, 2, 'Trà sữa Trân Châu', 26000, '01-tra-bi-dao-sb-300x300.jpg', ''),
+(11, 2, 'Trà Sữa Trà Xanh Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', ''),
+(12, 2, 'Trà Sữa Darjeeling', 26000, '02-vai-300x300.jpg', ''),
+(13, 2, 'Trà Sữa Sen', 29000, '03-chanh-day-300x300.jpg', ''),
+(14, 2, 'Trà Sữa Dâu Tây', 26000, '03-hong-tra-sb-300x300.jpg', ''),
+(15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, '04-socola-300x300.jpg', ''),
+(16, 2, 'Trà Sữa Ô Long', 26000, '04-tra-tuoi-sb-300x300.jpg', ''),
+(17, 2, 'Trà Sữa Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', ''),
+(18, 2, 'Trà Sữa Vani', 29000, '05-darjeeling-300x300.jpg', ''),
+(19, 2, 'Trà Sữa Hạnh Nhân', 29000, '05-la-cay-sb-300x300.jpg', ''),
+(20, 2, 'Trà Sữa Mật Ong', 29000, '06-alisan-sb-300x300.jpg', ''),
+(21, 2, 'Trà Sữa Alisan', 29000, '06-caramen-300x300.jpg', ''),
+(22, 2, 'Trà Sữa Quan Âm', 29000, '06-dau-tay-300x300.jpg', ''),
+(23, 2, 'Trà Sữa Ceylon', 23000, '07-gao-sb-300x300.jpg', ''),
+(24, 2, 'Trà Sữa Hoa Lục Trà', 29000, '07-tra-xanh-300x300.jpg', ''),
+(25, 2, 'Trà Sữa Vải', 23000, '08-o-long-300x300.jpg', ''),
+(26, 2, 'Trà Sữa Gạo Nâu', 29000, '08-quan-am-sb-300x300.jpg', ''),
+(27, 2, 'Trà Sũa Trà Xanh', 26000, '08-xoai-300x300.jpg', ''),
+(28, 3, 'Kem Tuyết Trà Xanh Nhật Bản', 41000, '09-o-long-sb-300x300.jpg', ''),
+(29, 3, 'Kem Tuyết Xoài', 28000, '09-tachi-300x300.jpg', ''),
+(30, 3, 'Kem Tuyết Dâu', 28000, '10-4-mua-xuan-sb-300x300.jpg', ''),
+(31, 3, 'Kem Tuyết Vải', 28000, '10-socola-300x300.jpg', ''),
+(32, 3, 'Kem Tuyết Chanh Dây', 28000, '11-khoai-mon-300x300.jpg', ''),
+(33, 3, 'Kem Tuyết Sôcôla', 35000, '12-caramen-300x300.jpg', ''),
+(34, 3, 'Kem Tuyết Đào', 35000, '13-vani-300x300.jpg', ''),
+(35, 3, 'Kem Tuyết Caramen', 38000, '14-almond-300x300.jpg', ''),
+(36, 4, 'Trà Tươi Sủi Bọt', 35000, '15-honey-300x300.jpg', ''),
+(37, 4, 'Sủi Bọt Lá Cây', 38000, '22-4-mua-xuan-S-300x300.jpg', ''),
+(38, 4, 'Trà Alisan Sủi Bọt', 38000, '23-sen-300x300.jpg', ''),
+(39, 4, 'Trà Gạo Nâu Sủi Bọt', 38000, '24-tra-sua-toffee-nut-300x300.jpg', ''),
+(40, 4, 'Trà Quan Âm Sủi Bọt', 38000, '25-TS-kiwi-300x300.jpg', ''),
+(41, 4, 'Trà Ô Long Sủi Bọt', 38000, 'Matcheese-300x300.jpg', ''),
+(42, 4, 'Trà 4 Mùa Xuân Sủi Bọt', 38000, 'Mattchalatte-300x300.jpg', ''),
+(43, 4, 'Matcheese', 49000, '01-dau-600x600.jpg', ''),
+(44, 4, 'Trà Bí Đao Sủi Bọt', 33000, '01-tra-bi-dao-sb-300x300.jpg', ''),
+(45, 4, 'Trà Xanh Sủi Bọt', 35000, '02-tra-xanh-sb-300x300.jpg', ''),
+(46, 4, 'Hồng Trà Sủi Bọt', 35000, '02-vai-300x300.jpg', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -411,12 +412,12 @@ ALTER TABLE `nhanvien`
 -- AUTO_INCREMENT cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT cho bảng `tintuc`
 --
 ALTER TABLE `tintuc`
-  MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT cho bảng `trasua`
 --
