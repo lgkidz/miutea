@@ -1,4 +1,5 @@
 <footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <a class="up-arrow" id="to_top" data-toggle="tooltip" title="Go to top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
@@ -35,8 +36,8 @@
 		  <div class="col-sm-4 form-group"> </div>
        
         <div class="col-sm-2 form-group" align="right">
-      <i class="fa fa-facebook-official" style="font-size:36px;color:brown"></i>
-        <i class="fa fa-instagram" style="font-size:36px;color:brown"></i>
+      <a href="https://www.facebook.com"><i class="fa fa-facebook-official" style="font-size:36px;color:brown"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram" style="font-size:36px;color:brown"></i></a>
          </div>
        </div>
 	  </div>

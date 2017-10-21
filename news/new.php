@@ -17,7 +17,6 @@
 }
 
 h1 {
-    font-family: "Poppins", sans-serif;
     word-break: break-all;
 	text-align: center;
 }
