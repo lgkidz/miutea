@@ -41,7 +41,7 @@ body, html {
   <div class="w3-display-middle">
 	  <p> <h1>Để lại lời nhắn cho chúng tôi </h1>
 	  <br> <br> <br><br> <br> <br> <br> <br>
-	<p> <button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black w3-display-middle w3-jumbo">tại đây</button></p>
+	<p> <button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black w3-display-middle w3-jumbo">Tại đây</button></p>
 		
 		</div>
 	 <div style="margin-bottom: 30px;" class="w3-display-bottomleft w3-container">
