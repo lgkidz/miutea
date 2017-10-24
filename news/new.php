@@ -91,7 +91,7 @@ h1 {
       <h3><?php echo $ob->tieu_de;?></h3>
       <p><?php echo substr($ob->noi_dung,0,75);?> ...
 		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
+			<a href="#" class="w3-text-blue-gray"> Xem thêm  </a></p>
     </div>
   </div>
 <?php } ?>
