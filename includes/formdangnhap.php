@@ -1,4 +1,4 @@
-<div class="page-register">
+<div style="margin-bottom: 60px;" class="page-register">
 <div class="container-fluid">
 	<img src="core_images/content.jpg">
 </div>

@@ -28,7 +28,7 @@
           <input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
         </div>
          <div class="col-sm-1 form-group">
-          <button class="btn btn-default pull-right" type="submit">Theo dõi</button>
+          <a href="../news/"><button class="btn btn-default pull-right" type="submit">Theo dõi</button></a>
         </div>
 			</div>
       <br> <br> <br>

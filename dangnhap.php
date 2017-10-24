@@ -99,7 +99,7 @@
           <input class="form-control" id="email" name="email" placeholder="Email" type="text">
         </div>
          <div class="col-sm-1 form-group">
-          <a href="#"><button class="btn btn-default pull-right" type="button">Theo dõi</button></a>
+          <a href="news/"><button class="btn btn-default pull-right" type="button">Theo dõi</button></a>
         </div>
 			</div>
       <br> <br> <br>
