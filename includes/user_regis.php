@@ -38,7 +38,7 @@ if(isset($_POST["dangky"])){
 		session_start();
 		$_SESSION["user_name"] = $name;
 		$_SESSION["userlegal"] = true;
-		header("location: ../userprofile.php");
+		header("location: ../user/userprofile.php");
 	}
 }
 ?>

@@ -1,5 +1,8 @@
 <div class="page-register">
-<div class="container">
+<div class="container-fluid">
+	<img src="core_images/content.jpg">
+</div>
+<div style="margin-top: 50px;" class="container">
 <div class="row">
 <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border-right">
