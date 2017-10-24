@@ -45,7 +45,7 @@ body {
 	<?php include('header.php'); ?>
 	<div style="margin-top: -20px;" id="about_us">
 		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
-  <h1 class="w3-xxxlarge w3-text-brown"> Về chúng tôi</h1>
+  <h1 class="w3-xxxlarge w3-text-brown">VỀ CHÚNG TÔI</h1>
 </div>
 
 <div class="w3-row-padding w3-content" style="max-width:1400px">

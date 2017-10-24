@@ -8,7 +8,7 @@ body {
 	
 }
 .Tintuc {
-    background-color: rgba(250,230,170,1.00);
+    background-color: white;
 	margin-bottom: -30px;
 	margin-top: -20px;
 }
@@ -55,7 +55,7 @@ h1 {
 }
 .content:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-	border: 5px solid rgba(241,203,245,1.00);
+	border: 5px solid #963;
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 900px) {
@@ -83,7 +83,7 @@ h1 {
 <!-- MAIN (Center website) -->
 <div style="margin-top: -20px;" id="about_us">
 		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
-  <h1 class="w3-xxxlarge w3-text-brown">Tin tức</h1>
+  <h1 class="w3-xxxlarge w3-text-brown">TIN TỨC</h1>
 </div>
 <!-- Portfolio Gallery Grid -->
 <div class="row">
