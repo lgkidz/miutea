@@ -22,21 +22,7 @@
 </head>
 
 <body>
-	  <style>
-  /* Note: Try to remove the following lines to see the effect of CSS positioning */
-  .affix {
-      top: 0;
-      width: 100%;
-  }
-
-  .affix + .container-fluid {
-      padding-top: 70px;
-  }
-	  .navbar{
-		  z-index: 99;
-	  }
-  </style>
- <nav class="navbar navbar-default" data-spy="affix" data-offset-top="0">
+ <nav class="navbar navbar-default">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -47,8 +33,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
-        <li><a href="#">Tin tức</a> </li>
-        <li><a href="#">Giới thiệu</a> </li>
+        <li><a href="news/">Tin tức</a> </li>
+        <li><a href="about/">Giới thiệu</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="sp/trasua.php">Trà sữa</a> </li>
