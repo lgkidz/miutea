@@ -68,7 +68,7 @@ body {
 			</div>
     <div class="w3-half">
       <p class="w3-padding-24"> Phong cách quán trà sữa được thiết kế hiện đại vẫn là xu hướng yêu thích của một bộ phận khách hàng trẻ. Hình ảnh, đường nét đơn giản kết hợp những màu sắc trang nhã, thanh lịch tạo nên nét cuốn hút vừa hiện đại vừa trẻ trung. Bên cạnh đó là các điểm nhấn ấn tượng, nhiều ý tưởng sáng tạo bắt kịp xu hướng thị trường sẽ tạo cảm giác thích thú cho khách hàng </p>
-		<br> <br>
+		<br> <br> <br> <br>
       <img src="img/mau-thiet-ke-quan-tra-sua-dep2.jpg"style="width:100%" onclick="onClick(this)" alt="Trang trí bằng hình ảnh ấn tượng">
     </div>
 <br> <br>

@@ -81,10 +81,10 @@ h1 {
 ?>
     <div class="Tintuc">
 <!-- MAIN (Center website) -->
-<div style="padding-top: 30px;" class="main">
-<h1 class="w3-xxxlarge w3-text-red"><b>Hôm nay có tin gì</b></h1>
-<p align="center">Chúc các bạn sẽ có được những thông tin thú vị</p>
-
+<div style="margin-top: -20px;" id="about_us">
+		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
+  <h1 class="w3-xxxlarge w3-text-brown">Tin tức</h1>
+</div>
 <!-- Portfolio Gallery Grid -->
 <div class="row">
  <?php foreach($news as $ob){ ?>
@@ -102,4 +102,4 @@ h1 {
 <!-- END GRID -->
 </div>
 
-</div></div>
+</div>
