@@ -52,8 +52,8 @@ body {
   <div class="w3-twothird w3-center">
     <img src="img/21765169_1089251934545011_7844197691680673624_n.jpg" alt="Notebook" style="width:100%">
 	  <br><br><br>
-   <h1 class="w3-xxxlarge w3-text-red"><b>Miutea</b></h1>
-    <div class="w3-justify w3-center">
+   <h1 class="w3-xxxlarge w3-text-brown"><b>Miutea</b></h1>
+    <div class="w3-justify w3-left">
 		<br> <br> 
       <p>Miutea là một thương hiệu trà sữa vô cùng nổi tiếng với các bạn trẻ Không chỉ có kem cheese ngon đặc sắc làm nức lòng các milktea lover, mà trà hoa quả với vị trà thanh mát từ lá trà được chắt lọc ở những đồi chè nổi tiếng kết hợp với trái cây tươi thật sự chinh phục trái tim thực khách.
 		  <br> <br>
@@ -62,14 +62,14 @@ body {
 	  <br>
 	    <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="img/mau-thiet-ke-quan-tra-sua-dep1.jpg"style="width:100%" onclick="onClick(this)" alt="Phong cách hiện đại, trẻ trung">
+      <img src="img/mau-thiet-ke-quan-tra-sua-dep1.jpg"style="width:100%" onclick="onClick(this)" alt="<br>Phong cách hiện đại, trẻ trung">
 		
-		<p class="w3-padding-64"> Để thu hút đặc biệt đến khách hàng thì việc thiết kế không gian cùng những hình ảnh ấn tượng, độc đáo mang nét cá tính riêng biệt cũng được lựa chọn. Ở đây từ thiết kế nội thất quán trà sữa đến cách trang trí, sắp xếp rồi màu sắc luôn có sự sáng tạo, độc đáo riêng của quán. </p>
+		<p class="w3-padding-64" align="left"> Để thu hút đặc biệt đến khách hàng thì việc thiết kế không gian cùng những hình ảnh ấn tượng, độc đáo mang nét cá tính riêng biệt cũng được lựa chọn. Ở đây từ thiết kế nội thất quán trà sữa đến cách trang trí, sắp xếp rồi màu sắc luôn có sự sáng tạo, độc đáo riêng của quán. </p>
 			</div>
     <div class="w3-half">
-      <p class="w3-padding-24"> Phong cách quán trà sữa được thiết kế hiện đại vẫn là xu hướng yêu thích của một bộ phận khách hàng trẻ. Hình ảnh, đường nét đơn giản kết hợp những màu sắc trang nhã, thanh lịch tạo nên nét cuốn hút vừa hiện đại vừa trẻ trung. Bên cạnh đó là các điểm nhấn ấn tượng, nhiều ý tưởng sáng tạo bắt kịp xu hướng thị trường sẽ tạo cảm giác thích thú cho khách hàng </p>
-		<br> <br> <br> <br>
-      <img src="img/mau-thiet-ke-quan-tra-sua-dep2.jpg"style="width:100%" onclick="onClick(this)" alt="Trang trí bằng hình ảnh ấn tượng">
+      <p class="w3-padding-24" align="left"> Phong cách quán trà sữa được thiết kế hiện đại vẫn là xu hướng yêu thích của một bộ phận khách hàng trẻ. Hình ảnh, đường nét đơn giản kết hợp những màu sắc trang nhã, thanh lịch tạo nên nét cuốn hút vừa hiện đại vừa trẻ trung. Bên cạnh đó là các điểm nhấn ấn tượng, nhiều ý tưởng sáng tạo bắt kịp xu hướng thị trường sẽ tạo cảm giác thích thú cho khách hàng </p>
+		<br> <br> <br> <br> <br>
+      <img src="img/mau-thiet-ke-quan-tra-sua-dep2.jpg"style="width:100%" onclick="onClick(this)" alt="<br>Trang trí bằng hình ảnh ấn tượng">
     </div>
 <br> <br>
 			<div class="w3-row-padding w3-center">
@@ -137,7 +137,7 @@ body {
 		<br>
       <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 			  <br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
+			<a href="../dangnhap.php" class="w3-text-blue-gray"> Xem thêm >> </a></p>
     </div>
 	  <br>
 	      <div class="w3-container  w3-light-grey w3-justify">
@@ -148,7 +148,7 @@ body {
 		<br>
       <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
 		  <br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm >> </a></p>
+			<a href="../khuyenmai.php" class="w3-text-blue-gray"> Xem thêm >> </a></p>
     </div>
 	
   </div>

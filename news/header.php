@@ -18,7 +18,7 @@
             <li><a href="../sp/kemcheese.php">Kem cheese</a> </li>
             <li><a href="../sp/dabao.php">Đá bào</a> </li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Khuyến mãi</a> </li>
+            <li><a href="../sp/khuyenmai.php">Khuyến mãi</a> </li>
           </ul>
         </li>
         <li><a href="../contact/">Liên hệ</a> </li>
@@ -36,7 +36,7 @@
 	  <?php
 		  }
 		?>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
+        <li><a href="../cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">

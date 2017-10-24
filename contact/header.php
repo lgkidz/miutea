@@ -1,18 +1,5 @@
-  <style>
-  /* Note: Try to remove the following lines to see the effect of CSS positioning */
-  .affix {
-      top: 0;
-      width: 100%;
-  }
 
-  .affix + #lienhe {
-      padding-top: 10px;
-  }
-	  .navbar{
-		  z-index: 99;
-	  }
-  </style>
- <nav class="navbar navbar-default"  data-spy="affix" data-offset-top="10">
+ <nav class="navbar navbar-default">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -31,7 +18,7 @@
             <li><a href="../sp/kemcheese.php">Kem cheese</a> </li>
             <li><a href="../sp/dabao.php">Đá bào</a> </li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Khuyến mãi</a> </li>
+            <li><a href="../sp/khuyenmai.php">Khuyến mãi</a> </li>
           </ul>
         </li>
         <li class="active"><a href="../contact/">Liên hệ</a> </li>
@@ -49,7 +36,7 @@
 	  <?php
 		  }
 		?>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
+        <li><a href="../cart"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">

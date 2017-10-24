@@ -31,7 +31,7 @@
             <li><a href="kemcheese.php">Kem cheese</a> </li>
             <li><a href="dabao.php">Đá bào</a> </li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Khuyến mãi</a> </li>
+            <li><a href="khuyenmai.php">Khuyến mãi</a> </li>
           </ul>
         </li>
         <li><a href="../contact/">Liên hệ</a> </li>
