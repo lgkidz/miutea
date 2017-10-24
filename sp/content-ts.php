@@ -1,9 +1,8 @@
 
-
 <div class="container-fluid">
- <div class="container-fluid">
+     <div class="container-fluid">
           <img src="../core_images/content.jpg">
-	</div>
+    </div>
   <div class="row">
     <div class="col-lg-12 page-header text-center">
       <h2>Trà Sữa</h2>
@@ -11,9 +10,9 @@
   </div>
   <div class="container text-center">
 	<?php foreach($result as $ob){ ?>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <div class="thumbnail"> <img style="height: 300px;width: 300px;" src="../core_images/<?php echo $ob->hinh_anh_ts;?>" alt="Thumbnail Image 1" class="img-responsive">
-        <div class="caption">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+      <div class="thumbnail"> <img src="../core_images/<?php echo $ob->hinh_anh_ts;?>" alt="Thumbnail Image 1" class="img-responsive">
+        <div style="height: 250px;" class="caption">
 			<h4><?php echo $ob->ten_ts;?></h4>
           <span><?php echo $ob->gia_ts;?> VND</span>
           <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a> </p>
@@ -48,4 +47,5 @@
   </div>
 </div>
 </div>
+  
   <!-- /container -->

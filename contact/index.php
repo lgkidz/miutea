@@ -40,7 +40,7 @@ body, html {height: 100%}
 	<p> <button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black w3-display-middle w3-jumbo">tại đây</button></p>
 		
 		</div>
-	 <div class="w3-display-bottomleft w3-container">
+	 <div style="margin-bottom: 30px;" class="w3-display-bottomleft w3-container">
 	
     <p class="w3-xlarge">Thứ 2 - Thứ 6: 9 - 22h | Thứ 7 - CN: 10h - 2h </p>
     <p class="w3-large">Hà Nội, Việt Nam</p>
