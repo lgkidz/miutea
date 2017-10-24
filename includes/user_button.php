@@ -87,7 +87,7 @@
               </li>
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="user/userprofile.php" class="btn btn-default btn-flat">Profile</a>
+                  <a href="user/" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="dangnhap.php" class="btn btn-default btn-flat">Sign out</a>

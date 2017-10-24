@@ -28,6 +28,7 @@ if(isset($_POST["dangnhap"])){
 	if($rert->mat_khau_tv == $pas){
 		session_start();
 		$_SESSION["user_name"] = $rert->ten_tv;
+		$_SESSION["email"] = $rert->email;
 		$_SESSION["userlegal"] = true;
 		header("location: ../");
 	}

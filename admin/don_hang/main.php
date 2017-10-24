@@ -47,11 +47,12 @@
 								?>
 							</td>
 							<td><?php echo $fb->ten_nv; ?></td>
-							<td ><span class="dropdown"><?php echo $fb->trang_thai==1?"<span class='label label-success'>Shipped</span>":"<span class='label label-warning'>Pending</span>"; ?><i class="fa fa-angle-down pull-right dropdown-toggle" data-toggle="dropdown"></i><ul class="dropdown-menu">
+							<td ><span class="dropdown"><?php if($fb->trang_thai==1){echo "<span class='label label-success'>Shipped</span>";}else if($fb->trang_thai==0){echo "<span class='label label-warning'>Pending</span>";}else if($fb->trang_thai==-1){echo "<span class='label label-danger'>Canceled</span>";} ?><i class="fa fa-angle-down pull-right dropdown-toggle" data-toggle="dropdown"></i><ul class="dropdown-menu">
    								<li><a>Thay đổi trạng thái</a></li>
    								<li class="divider"></li>
     							<li><a href="?status=1&id=<?php echo $fb->ma_dh; ?>">Shipped</a></li>
     							<li><a href="?status=0&id=<?php echo $fb->ma_dh; ?>">Pending</a></li>
+    							<li><a href="?status=-1&id=<?php echo $fb->ma_dh; ?>">Canceled</a></li>
   							</ul></span></td>
 							<td><?php echo $fb->ngay_dh; ?></td>
 						</tr>

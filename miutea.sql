@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 21, 2017 lúc 04:19 PM
+-- Thời gian đã tạo: Th10 24, 2017 lúc 06:30 PM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -64,8 +64,8 @@ CREATE TABLE `chitietdonhang` (
 --
 
 INSERT INTO `chitietdonhang` (`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`) VALUES
-(1, 7, 2, 35000, 70000),
-(1, 8, 3, 40000, 120000);
+(2, 10, 2, 26000, 52000),
+(2, 33, 2, 35000, 70000);
 
 -- --------------------------------------------------------
 
@@ -96,6 +96,7 @@ INSERT INTO `danhgiasp` (`ma_ts`, `so_sao`, `danh_gia`) VALUES
 CREATE TABLE `donhang` (
   `ma_dh` int(11) NOT NULL,
   `ten_kh` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ngay_dh` datetime NOT NULL,
   `noi_giao` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sdt` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -107,8 +108,9 @@ CREATE TABLE `donhang` (
 -- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
-(1, 'nguyễn thị A', '2017-10-17 02:07:15', 'cầu giấy', '001002', 1, -1);
+INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `email`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
+(1, 'nguyễn thị A', '', '2017-10-17 02:07:15', 'cầu giấy', '001002', 1, -1),
+(2, 'Mạnh', 'lgkidz@gmail.com', '2017-10-11 00:00:00', 'Trần Cung', '0974232266', -1, -1);
 
 -- --------------------------------------------------------
 
@@ -143,7 +145,8 @@ INSERT INTO `feedback` (`ma_feedback`, `ten_nguoi_lh`, `email_nguoi_lh`, `noi_du
 (31, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
 (32, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
 (33, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(34, 'z', 'v', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00');
+(34, 'z', 'v', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
+(40, 'Mạnh', 'lgkidz@gmail.com', 'ahihi', '2017-10-24 23:22:24');
 
 -- --------------------------------------------------------
 
@@ -222,7 +225,7 @@ INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh
 (9, 'tên tiếp thep', '5555555', 'laos', 'lol@gmai.com', 1, 'lololol', '0000000'),
 (10, 'tên thử', '641068', 'tôi là ai? đây là đâu?', 'email@email.com', 0, 'emailemail', '000000'),
 (11, 'tên cuối', '33252544', 'sao hỏa', 'mars@nasa.gov', 1, 'alien', '111111'),
-(14, 'Mạnh', '', '', 'lgkidz@gmail.com', 0, '', '000000');
+(14, 'Mạnh', '0974232266', 'Hà Nội', 'lgkidz@gmail.com', 0, '', '000000');
 
 -- --------------------------------------------------------
 
@@ -392,12 +395,12 @@ ALTER TABLE `danhgiasp`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT cho bảng `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `ma_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ma_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT cho bảng `loaitrasua`
 --
