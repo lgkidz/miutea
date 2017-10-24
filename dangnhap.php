@@ -61,7 +61,7 @@
         <li><a href="#">Liên hệ</a> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="includes/dangnhap.php">Đăng nhập</a> </li>
+        <li><a href="dangnhap.php">Đăng nhập</a> </li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
