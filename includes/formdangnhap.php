@@ -22,7 +22,7 @@
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 <form id="dangkyForm" name="dangkyForm" action="includes/user_regis.php" method="post"  enctype="multipart/form-data">
 <h3>ĐĂNG KÝ</h3>
-<div class="form-group has-feedback has-error">
+<div class="form-group has-feedback">
 <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Fullname" data-error="Vui lòng cho biết họ tên." required>
 </div>
 <div class="form-group has-feedback">
