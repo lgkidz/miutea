@@ -5,6 +5,9 @@ class kc_controller{
 	public $pagination = 6;
 	public function __construct(){
 		$this->model = new model();
+		if(!isset($_SESSION["items"])){
+			$_SESSION["items"] = array();
+		}
 	}
 	
 	public function n_o_p(){
@@ -23,7 +26,17 @@ class kc_controller{
 		include("content-kc.php");
 	}
 	
+	public function addToCart($i){
+		array_push($_SESSION["items"],$i);
+	}
+	
 	public function process(){
+		if(isset($_GET["addtocart"])){
+			$itemid = $_GET["addtocart"];
+			$this->addToCart($itemid);
+			$_SESSION["backtoshop"] = "../sp/kemcheese.php#content-ts";
+			header("location: ../cart");
+		}
 		if(isset($_GET["page"])){
 			$x = $_GET["page"];
 			$p = ($x - 1)*$this->pagination;

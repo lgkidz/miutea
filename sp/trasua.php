@@ -23,7 +23,9 @@ session_start();
 	$controller = new ts_controller();
 	$controller->process();
 	?>
-    
+    <pre>
+    	<?php print_r($_SESSION["items"])  ?>
+    </pre>
     <?php include('footer.php'); ?>
 </body>
 </html>

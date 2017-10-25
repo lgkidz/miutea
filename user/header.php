@@ -36,7 +36,7 @@
 	  <?php
 		  }
 		?>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
+        <li><a href="../cart/"><span class="glyphicon glyphicon-shopping-cart"><span class="badge"><?php echo isset($_SESSION["items"])? sizeof($_SESSION["items"]):0?></span></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
