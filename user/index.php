@@ -26,10 +26,10 @@ session_start();
 <body>
 <?php include("header.php");?>
 
-<div class="w3-container w3-content" style="max-width:1400px; padding-top: 25px;">    
+<div class="container-fluid" style=" padding-top: 25px;">    
   <!-- The Grid -->
    <!-- Left Column -->
-    <div class="w3-col m3">
+    <div class="col-lg-2 col-md-3 col-sm-12">
       <!-- Profile -->
       <div class="w3-sand">
         <div class="w3-container">

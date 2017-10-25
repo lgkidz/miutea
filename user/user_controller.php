@@ -21,6 +21,11 @@ class user_controller{
 		return $resultset;
 	}
 	
+	public function orderDetails($id){
+		$resultset = $this->model->orderDetails($id);
+		return $resultset;
+	}
+	
 	public function feedback($nd){
 		$n = $this->user_name;
 		$e = $this->user_mail;

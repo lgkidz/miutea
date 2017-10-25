@@ -30,6 +30,14 @@ class user_model{
 		return $resultset;
 	}
 	
+	public function orderDetails($id){
+		$query = "SELECT chitietdonhang.so_luong,chitietdonhang.tong_gia,trasua.ten_ts FROM chitietdonhang JOIN trasua ON chitietdonhang.ma_ts = trasua.ma_ts WHERE ma_dh = '$id'";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
 	public function cancleOrder($id){
 		$query = "UPDATE `donhang` SET `trang_thai`=-1 WHERE ma_dh = $id";
 		$statement = $this->con->prepare($query);

@@ -17,7 +17,6 @@
                   			<th>Nhân viên lập đơn hàng</th>
                   			<th>Trạng thái</th> 
                   			<th>Thời gian</th>
-
                 		</tr>
  					</thead>
         			<tbody>
@@ -67,8 +66,8 @@
                   			<th>Chi tiết đơn hàng</th>
                   			<th>Thành tiền</th>
                   			<th>Nhân viên lập đơn hàng</th>
+                  			<th>Trạng thái</th> 
                   			<th>Thời gian</th>
-                  			<th>Trạng thái</th>
                 		</tr>
         			</tfoot>
 				</table>
