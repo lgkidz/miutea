@@ -42,7 +42,7 @@
 									foreach($dh as $d){
 										$p += $d->tong_gia;
 									}
-									echo "$p VNĐ";
+									echo number_format($p) . " VNĐ";
 								?>
 							</td>
 							<td><?php echo $fb->ten_nv; ?></td>

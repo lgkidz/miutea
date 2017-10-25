@@ -27,6 +27,7 @@
 		<td><?php echo $or->ma_dh?></td>
 		<?php
 			$details = $this->orderDetails($or->ma_dh);
+			setlocale(LC_MONETARY, 'en_US');
 			$nd = "";
 			$p = 0;
 			foreach($details as $a){
@@ -35,7 +36,7 @@
 			}
 		?>
 		<td><?php echo $nd;?></td>
-		<td><?php echo $p;?> VNĐ</td>
+		<td><?php echo number_format($p);?> VNĐ</td>
 		<td><?php echo date_format(date_create($or->ngay_dh),"H:i d/m/Y")?></td>
 		<td><?php echo $or->noi_giao?></td>
 		<td><?php echo $or->sdt?></td>

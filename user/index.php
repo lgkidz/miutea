@@ -1,6 +1,9 @@
 <!doctype html>
 <?php
 session_start();
+if($_SESSION["userlegal"] != true){
+	header("location: ../dangnhap.php");
+}
 ?>
 <html>
 <head>

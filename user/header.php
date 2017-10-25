@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="../index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
-        <li class="active"><a href="../news/">Tin tức</a> </li>
+        <li><a href="../news/">Tin tức</a> </li>
         <li><a href="../about/">Giới thiệu</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
           <ul class="dropdown-menu">

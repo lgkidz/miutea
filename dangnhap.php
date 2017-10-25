@@ -32,7 +32,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
+        <li><a href="index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
         <li><a href="news/">Tin tức</a> </li>
         <li><a href="about/">Giới thiệu</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
@@ -47,7 +47,7 @@
         <li><a href="contact/">Liên hệ</a> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="dangnhap.php">Đăng nhập</a> </li>
+        <li  class="active"><a href="dangnhap.php">Đăng nhập</a> </li>
         <li><a href="cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a> </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
