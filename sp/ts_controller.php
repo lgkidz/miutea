@@ -27,15 +27,15 @@ class ts_controller{
 	}
 	
 	public function addToCart($i){
-		array_push($_SESSION["items"],$i);
+		array_push($_SESSION["items"],array($i,1));
 	}
 	
 	public function process(){
 		if(isset($_GET["addtocart"])){
 			$itemid = $_GET["addtocart"];
 			$this->addToCart($itemid);
-			$_SESSION["backtoshop"] = "../sp/trasua.php#content-ts";
-			header("location: ../cart");
+			$_SESSION["backtoshop"] = "../sp/trasua.php";
+			echo '<script type="text/javascript">location.replace("../cart");</script>';
 		}
 		if(isset($_GET["page"])){
 			$x = $_GET["page"];

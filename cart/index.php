@@ -18,7 +18,11 @@ session_start();
 	</head>
 	<body>
 	<?php include('header.php');?>
-	<?php include('cart.php');?>
+	<?php
+		include('cart_controller.php');
+		$controller = new cart_controller();
+		$controller->process();
+	?>
 	<br>
 	<?php include('footer.php'); ?>
 	
