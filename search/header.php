@@ -1,5 +1,18 @@
+  <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix {
+      top: 0;
+      width: 100%;
+  }
 
- <nav class="navbar navbar-default">
+    .affix + .container-fluid {
+      padding-top: 50px;
+  }
+	  .navbar{
+		  z-index: 99;
+	  }
+  </style>
+ <nav class="navbar navbar-default"  data-spy="affix" data-offset-top="0">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -12,7 +25,7 @@
         <li><a href="../index.php">Trang chủ <span class="sr-only">(current)</span></a> </li>
         <li><a href="../news/">Tin tức</a> </li>
         <li><a href="../about/">Giới thiệu</a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
+        <li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Sản phẩm <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="../sp/trasua.php">Trà sữa</a> </li>
             <li><a href="../sp/kemcheese.php">Kem cheese</a> </li>
@@ -38,7 +51,7 @@
 		?>
         <li><a href="../cart/"><span class="glyphicon glyphicon-shopping-cart"><span class="badge"><?php echo isset($_SESSION["items"])? sizeof($_SESSION["items"]):0?></span></span></a> </li>
       </ul>
-      <form action="../search/" method="post" class="navbar-form navbar-right" role="search">
+      <form action="index.php" method="post" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" name="search" class="form-control" placeholder="Tìm kiếm...">
         </div>

@@ -38,9 +38,9 @@
 		?>
         <li><a href="../cart/"><span class="glyphicon glyphicon-shopping-cart"><span class="badge"><?php echo isset($_SESSION["items"])? sizeof($_SESSION["items"]):0?></span></span></a> </li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      <form action="../search/" method="post" class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Tìm kiếm...">
+          <input type="text" name="search" class="form-control" placeholder="Tìm kiếm...">
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
       </form>

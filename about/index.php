@@ -148,7 +148,7 @@ body {
 		<br>
       <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
 		  <br>
-			<a href="../khuyenmai.php" class="w3-text-brown"> Xem thêm >> </a></p>
+			<a href="../sp/khuyenmai.php" class="w3-text-brown"> Xem thêm >> </a></p>
     </div>
 	
   </div>
