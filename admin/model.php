@@ -24,7 +24,7 @@ class model{
 	}
 	
 	public function get_no_sold(){
-		$query = "SELECT so_luong FROM chitietdonhang";
+		$query = "SELECT chitietdonhang.so_luong,chitietdonhang.tong_gia FROM chitietdonhang";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);

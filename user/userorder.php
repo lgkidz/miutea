@@ -45,7 +45,7 @@
 		<?php
 			if($x == 0){	
 		?>
-			<a href="?action=cancelorder&id=<?php echo $or->ma_dh?>"><button type="button" class="w3-button w3-padding-small w3-red ">Hủy đơn hàng</button></a>
+			<a href="?action=cancelorder&id=<?php echo $or->ma_dh?>"><button type="button" class="w3-button w3-padding-small w3-red " onClick="return confirm('Bạn chắc chắn sẽ hủy đơn hàng này chứ?');">Hủy đơn hàng</button></a>
 		<?php
 			}
 		?>
