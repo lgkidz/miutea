@@ -1,4 +1,3 @@
-
 <div class="container-fluid" style="margin-top: -20px;margin-left: -15px;margin-right: -15px;margin-bottom: -50px;">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

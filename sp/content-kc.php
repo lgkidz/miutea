@@ -15,7 +15,7 @@
         <div class="caption">
 			<h4><?php echo $ob->ten_ts;?></h4>
           <span><?php echo $ob->gia_ts;?> VND</span>
-          <p><a href="?addtocart=<?php echo $ob->ma_ts;?>" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a> </p>
+          <p><a href="?addtocart=<?php echo $ob->ma_ts;?>" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Chọn</a> </p>
         </div>
       </div>
     </div>

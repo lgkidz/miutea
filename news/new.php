@@ -90,11 +90,11 @@ h1 {
  <?php foreach($news as $ob){ ?>
   <div class="column">
     <div class="content">
-      <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
+      <img src="img/gcs_thumb_5768a93f6e0b496d85b65740-2016-06-21-024110.jpg" alt="" style="width:100%">
       <h3><?php echo $ob->tieu_de;?></h3>
       <p><?php echo substr($ob->noi_dung,0,75);?> ...
 		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm  </a></p>
+			<a href="#" class="w3-text-brown"> Xem thêm  </a></p>
     </div>
   </div>
 <?php } ?>
