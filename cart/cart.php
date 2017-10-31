@@ -75,7 +75,7 @@ h1 {
 <!-- MAIN (Center website) -->
 <div style="margin-top: -20px;" id="about_us">
 		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
-  <h1 class="w3-xxxlarge w3-text-brown">Giỏ hàng của tôi</h1>
+  <h1 class="w3-xxxlarge w3-text-brown">GIỎ HÀNG CỦA TÔI</h1>
 </div>
 <!-- Portfolio Gallery Grid -->
 <div class="container-fluid">
@@ -140,7 +140,7 @@ h1 {
 </div>
     <div style="margin-top: 30px;margin-bottom: 50px;" class="container">
     <center>
-    	<a href="<?php echo $_SESSION["backtoshop"];?>"><button class="btn btn-warning"><h4><span class="glyphicon glyphicon-arrow-left"></span> Tiếp tục mua hàng</h4></button></a>
+    	<a href="<?php echo $_SESSION["backtoshop"];?>"><button class="btn btn-warning"><h4><span class="glyphicon glyphicon-arrow-left"></span>Tiếp tục mua hàng</h4></button></a>
     </center>
     </div>
 </div>
