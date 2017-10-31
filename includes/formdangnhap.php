@@ -9,7 +9,7 @@
 <form role="form" id="dangnhapForm" name="dangnhapForm" action="includes/user_login.php" method="post"  enctype="multipart/form-data">
 <h3>ĐĂNG NHẬP</h3>
 <div class="form-group has-feedback">
-<input type="email" id="maildangnhap" name="maildangnhap" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="name@email.com" data-error="Địa chỉ mail hoặc định dạng không đúng." required>
+<input type="email" id="maildangnhap" name="maildangnhap" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Name@email.com" data-error="Địa chỉ mail hoặc định dạng không đúng." required>
 <span class="help-block with-errors"></span>
 </div>
 <div class="form-group has-feedback">
@@ -29,7 +29,7 @@
 <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Fullname" data-error="Vui lòng cho biết họ tên." required>
 </div>
 <div class="form-group has-feedback">
-<input type="email" id="mailaddress" name="mailaddress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="name@email.com" data-error="Địa chỉ mail hoặc định dạng không đúng." required="">
+<input type="email" id="mailaddress" name="mailaddress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Name@email.com" data-error="Địa chỉ mail hoặc định dạng không đúng." required="">
 <span class="help-block with-errors"></span>
 </div>
 <div class="form-group has-feedback">
