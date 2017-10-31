@@ -22,19 +22,19 @@
 			<div class="panel-body">
 			<div class="form-group">
     			<label for="name">Họ tên:</label>
-    			<input type="text" class="form-control" value="<?php echo $name;?>" id="name" name="name" placeholder="Họ tên" oninvalid="setCustomValidity('Xin nhập tên người nhận')" required>
+    			<input type="text" class="form-control" value="<?php echo $name;?>" id="name" name="name" placeholder="Họ tên" required>
   			</div>
 			<div class="form-group">
     			<label for="email">Email:</label>
-    			<input type="email" class="form-control" placeholder="Email" value="<?php echo $email;?>" id="email" name="email" oninvalid="setCustomValidity('Email không hợp lệ')" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    			<input type="email" class="form-control" placeholder="Email" value="<?php echo $email;?>" id="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
   			</div>
 			<div class="form-group">
     			<label for="tel">Số điện thoại:</label>
-    			<input type="number" class="form-control" placeholder="Số điện thoại" value="<?php echo $tel;?>" id="tel" name="tel" min="0" max="99999999999" oninvalid="setCustomValidity('Số điện thoại ko hợp lệ')" required>
+    			<input type="number" class="form-control" placeholder="Số điện thoại" value="<?php echo $tel;?>" id="tel" name="tel" min="0" max="99999999999"  required>
   			</div>
   			<div class="form-group">
     			<label for="addr">Địa chỉ:</label>
-    			<input type="text" class="form-control" placeholder="Địa chỉ" value="<?php echo $addr;?>" id="addr" name="addr" oninvalid="setCustomValidity('Xin nhập địa chỉ giao hàng')" required>
+    			<input type="text" class="form-control" placeholder="Địa chỉ" value="<?php echo $addr;?>" id="addr" name="addr" required>
   			</div>
   			</div>
   		</div>
