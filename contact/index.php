@@ -25,7 +25,7 @@ body, html {
 #lienhe {
 	margin-top: -20px;
 	margin-bottom: -30px;
-    background-image: url('img/THIET-KE-CAFE-TOBE3.jpg');
+    background-image: url('img/bobapop.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
