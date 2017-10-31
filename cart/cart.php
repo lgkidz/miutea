@@ -75,7 +75,7 @@ h1 {
 <!-- MAIN (Center website) -->
 <div style="margin-top: -20px;" id="about_us">
 		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
-  <h1 class="w3-xxxlarge w3-text-brown">GIỎ HÀNG CỦA TÔI</h1>
+  <?php if(isset($_GET["success"])) echo '<h1 class="w3-xxxlarge w3-text-brown">Bạn đã đặt hàng thành công <3</h1>'; else echo '<h1 class="w3-xxxlarge w3-text-brown">Giỏ hàng của tôi</h1>'; ?>
 </div>
 <!-- Portfolio Gallery Grid -->
 <div class="container-fluid">

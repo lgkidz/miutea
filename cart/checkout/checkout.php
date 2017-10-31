@@ -28,7 +28,7 @@ if(isset($_SESSION["userlegal"])){
 	header("location: ../../user/?action=order");
 }
 else{
-	header("location: ../");
+	header("location: ../?success=true");
 }
 
 ?>
