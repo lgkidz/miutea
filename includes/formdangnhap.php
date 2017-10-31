@@ -1,6 +1,6 @@
 <div style="margin-bottom: 60px;" class="page-register">
 <div class="container-fluid">
-	<img src="core_images/content.jpg">
+	 <img style="width: 100%;" src="core_images/content.jpg">
 </div>
 <div style="margin-top: 50px;" class="container">
 <div class="row">
