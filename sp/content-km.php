@@ -70,7 +70,36 @@ h1 {
         width: 100%;
     }
 }
+
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+body {
+	font-family: Helvetica Neue;
+	font-size: 14px;	
+}
 </style>
+
+	<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
 <?php
 	include("../connection/connection.php");
 	$con = new connection();
@@ -87,17 +116,49 @@ h1 {
 </div>
 <!-- Portfolio Gallery Grid -->
 <div class="row">
- <?php foreach($news as $ob){ ?>
-  <div class="column">
-    <div class="content">
-      <img src="img/thiết kế quán trà sữa dingtea 2 5.jpg" alt="" style="width:100%">
-      <h3><?php echo $ob->tieu_de;?></h3>
-      <p><?php echo substr($ob->noi_dung,0,75);?> ...
-		<br>
-			<a href="#" class="w3-text-blue-gray"> Xem thêm  </a></p>
+ <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="images/22282051_1131691660295674_559305115883979488_n.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/22141175_1127066084091565_48197985409345839_n.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/bobapop-chua-lang-ha-noi-khuyen-mai-giam-gia-1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/22141175_1127066084091565_48197985409345839_n.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
     </div>
   </div>
-<?php } ?>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="images/21766525_1124186167712890_387934289165682914_n.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/22555029_1135861229878717_1881517101062608678_n.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="" onclick="onClick(this)">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/22729065_1139299809534859_353184427846022730_n.jpg" style="width:100%" class="w3-hover-opacity" alt=""  onclick="onClick(this)">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/bobapop-nguyen-phong-sac-ha-noi-khuyen-mai-giam-gia.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
+    </div>
+  </div>
+	<div id="modal01" class="w3-modal w3-black" style="padding-top:35" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-bottomright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-16">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+	  </div>
 
 <!-- END GRID -->
 </div>

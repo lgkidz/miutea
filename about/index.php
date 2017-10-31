@@ -15,6 +15,7 @@ session_start();
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script>
 // Script to open and close sidebar
+
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
@@ -115,7 +116,7 @@ body {
 	  </div>
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:35" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-bottomright">×</span>
+    <span class="w3-button w3-black w3-xxlarge w3-display-bottomright">x</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-16">
       <img id="img01" class="w3-image">
       <p id="caption"></p>

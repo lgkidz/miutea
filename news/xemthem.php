@@ -70,7 +70,7 @@ body {
 	  <br>
 	    <div class="w3-row-padding w3-center">
     <div class="w3">
-      <img src="img/gcs_thumb_5768a93f6e0b496d85b65740-2016-06-21-024110.jpg.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="img/gcs_thumb_5768a93f6e0b496d85b65740-2016-06-21-024110.jpg" style="width:100%" onclick="onClick(this)">
       <div id="modal01" class="w3-modal w3-black" style="padding-top:35" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-bottomright">X</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-16">
