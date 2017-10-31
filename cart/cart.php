@@ -88,7 +88,7 @@ h1 {
    <?php }else{ ?>
 	<table class="table table-striped">
 		<tr>
-			<th colspan="2"><h5><?php echo $items ?> sản phẩm</h5></th>
+			<th colspan="2"><h5><?php echo $items ?>Sản phẩm</h5></th>
 			<th><h5>Đơn giá</h5></th>
 			<th><h5>Số lượng</h5></th>
 			<th></th>
