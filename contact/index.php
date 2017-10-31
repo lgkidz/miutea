@@ -60,10 +60,10 @@ body, html {
     <div class="w3-container">
 		<br>
       <p>Lời nhắn của bạn là món quà tuyệt vời với chúng tôi</p>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tên" required name="Tên"></p>
-		  <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nội dung lời nhắn" required name="Message"></p>
+      <form action="action.php" method="post">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tên" required name="name"></p>
+		  <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nội dung lời nhắn" required name="message"></p>
 		  <br> <br>
         <p><button class="w3-button w3-display-bottommiddle" type="submit">GỬI ĐI</button></p>
       </form>

@@ -75,7 +75,7 @@ h1 {
 	include("../connection/connection.php");
 	$con = new connection();
 	$con = $con->con;
-	$statement = $con->prepare("SELECT * FROM tintuc ORDER BY gio_dang LIMIT 0,4");
+	$statement = $con->prepare("SELECT * FROM tintuc ORDER BY ABS(TIMEDIFF(gio_dang, NOW())) LIMIT 0,4");
 	$statement->execute();
 	$news = $statement->fetchAll(PDO::FETCH_OBJ);
 ?>

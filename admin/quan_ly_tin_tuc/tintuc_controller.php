@@ -46,8 +46,9 @@ class tintuc_controller{
 		if($action == "add" && isset($_POST["subnew"])){
 			$t = $_POST["title"];
 			$b = $_POST["body"];
-			$target_dir = "../../news_images/";
+			$target_dir = "../../news/img/";
 			$target_file = $target_dir . basename($_FILES["img"]["name"]);
+			$file_name = basename($_FILES["img"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			// Check if image file is a actual image or fake image
@@ -79,11 +80,11 @@ class tintuc_controller{
 				// if everything is ok, try to upload file
 			}
 			else if($uploadOk == 2){
-				$this->addnews($t,$b,$target_file);
+				$this->addnews($t,$b,$file_name);
 			}
 			else {
     			if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
-        			$this->addnews($t,$b,$target_file);
+        			$this->addnews($t,$b,$file_name);
     			}
 				else {
         			echo "Sorry, there was an error uploading your file.";

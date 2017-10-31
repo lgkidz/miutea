@@ -21,7 +21,7 @@
 	<tr>
 		<td><?php echo $ob->ma_tin; ?></td>
 		<td><?php echo $ob->tieu_de; ?></td>
-		<td><img height="128" width="128" src="<?php echo $ob->hinh_anh; ?>"></td>
+		<td><img height="128" width="128" src="../../news/img/<?php echo $ob->hinh_anh; ?>"></td>
 		<td><textarea style="width:400px" readonly><?php echo $ob->noi_dung; ?></textarea></td>
 		<td><?php echo $ob->gio_dang; ?></td>
 		<td>
