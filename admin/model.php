@@ -38,6 +38,14 @@ class model{
 		return $resultset;
 	}
 	
+	public function most_favorite(){
+		$query = "SELECT sum(chitietdonhang.so_luong) AS so_luong, trasua.ten_ts FROM chitietdonhang INNER JOIN trasua on chitietdonhang.ma_ts = trasua.ma_ts GROUP BY trasua.ten_ts ORDER BY so_luong DESC LIMIT 0,1";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+		$resultset = $statement->fetch(PDO::FETCH_OBJ);
+		return $resultset;
+	}
+	
 	public function getMember(){
 		$query = "SELECT * FROM thanhvien LIMIT 0,8";
 		$statement = $this->con->prepare($query);
