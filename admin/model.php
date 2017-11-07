@@ -24,7 +24,7 @@ class model{
 	}
 	
 	public function get_no_sold(){
-		$query = "SELECT chitietdonhang.so_luong,chitietdonhang.tong_gia FROM chitietdonhang";
+		$query = "SELECT * FROM `chitietdonhang` INNER JOIN donhang  ON donhang.ma_dh = chitietdonhang.ma_dh WHERE donhang.trang_thai = 1";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -32,7 +32,7 @@ class model{
 	}
 	
 	public function get_no_order(){
-		$statement = $this->con->prepare("SELECT ma_dh FROM donhang");
+		$statement = $this->con->prepare("SELECT ma_dh FROM donhang WhERE trang_thai = 1");
 		$statement->execute();
 		$resultset = $statement->rowCount();
 		return $resultset;
