@@ -140,7 +140,7 @@ h1 {
 </div>
     <div style="margin-top: 30px;margin-bottom: 50px;" class="container">
     <center>
-    	<a href="<?php echo $_SESSION["backtoshop"];?>"><button class="btn btn-warning"><h4><span class="glyphicon glyphicon-arrow-left"></span>Tiếp tục mua hàng</h4></button></a>
+    	<a href="<?php echo isset($_SESSION["backtoshop"])?$_SESSION["backtoshop"]:"../sp/trasua.php";?>"><button class="btn btn-warning"><h4><span class="glyphicon glyphicon-arrow-left"></span>Tiếp tục mua hàng</h4></button></a>
     </center>
     </div>
 </div>

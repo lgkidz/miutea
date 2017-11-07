@@ -108,7 +108,8 @@ function onClick(element) {
 	$statement->execute();
 	$news = $statement->fetchAll(PDO::FETCH_OBJ);
 ?>
-    <div class="Tintuc">
+    <title></title>
+<div class="Tintuc">
 <!-- MAIN (Center website) -->
 <div style="margin-top: -20px;" id="about_us">
 		<div class=" w3-sand w3-padding-64 w3-margin-bottom w3-center">
