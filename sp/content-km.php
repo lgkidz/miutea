@@ -151,9 +151,9 @@ function onClick(element) {
       <img src="images/bobapop-nguyen-phong-sac-ha-noi-khuyen-mai-giam-gia.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="">
     </div>
   </div>
-	<div id="modal01" class="w3-modal w3-black" style="padding-top:35" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-bottomright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-16">
+	<div id="modal01" class="w3-modal w3-black" style="padding-top:0; z-index:1000" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-50">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
     </div>
