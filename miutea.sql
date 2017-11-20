@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.6
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 24, 2017 lúc 06:30 PM
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 7.1.8
+-- Host: localhost:3306
+-- Generation Time: Nov 20, 2017 at 06:16 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `miutea`
+-- Database: `id3650129_miutea`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -36,19 +34,16 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`ma_ad`, `ten_dn_ad`, `mat_khau`, `ten_ad`) VALUES
-(-1, 'admin', '000000', 'admin_clone'),
-(4, 'e', 'xxxxxx', 'clone'),
-(5, 'lgkidz', '111111', 'máº¡nh'),
-(6, 'test', '111111', 'test');
+(-1, 'admin', '000000', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitietdonhang`
+-- Table structure for table `chitietdonhang`
 --
 
 CREATE TABLE `chitietdonhang` (
@@ -60,37 +55,17 @@ CREATE TABLE `chitietdonhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chitietdonhang`
+-- Dumping data for table `chitietdonhang`
 --
 
 INSERT INTO `chitietdonhang` (`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`) VALUES
-(2, 10, 2, 26000, 52000),
-(2, 33, 2, 35000, 70000);
+(1, 35, 4, 38000, 152000),
+(2, 21, 1, 29000, 29000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `danhgiasp`
---
-
-CREATE TABLE `danhgiasp` (
-  `ma_ts` int(11) NOT NULL,
-  `so_sao` varchar(3) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `danh_gia` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `danhgiasp`
---
-
-INSERT INTO `danhgiasp` (`ma_ts`, `so_sao`, `danh_gia`) VALUES
-(7, '4.5', 'good'),
-(8, '5', 'best');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `donhang`
+-- Table structure for table `donhang`
 --
 
 CREATE TABLE `donhang` (
@@ -105,17 +80,17 @@ CREATE TABLE `donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `donhang`
+-- Dumping data for table `donhang`
 --
 
 INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `email`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
-(1, 'nguyễn thị A', '', '2017-10-17 02:07:15', 'cầu giấy', '001002', 1, -1),
-(2, 'Mạnh', 'lgkidz@gmail.com', '2017-10-11 00:00:00', 'Trần Cung', '0974232266', -1, -1);
+(1, 'Mạnh', 'mmm@gmail.com', '2017-11-18 23:19:08', 'Hàn', '9000', 0, -1),
+(2, 'Chi', 'chi@gmail.com', '2017-11-18 17:35:33', 'HN', '123', 0, -1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -127,31 +102,16 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `feedback`
+-- Dumping data for table `feedback`
 --
 
 INSERT INTO `feedback` (`ma_feedback`, `ten_nguoi_lh`, `email_nguoi_lh`, `noi_dung`, `ngay_lh`) VALUES
-(20, 'ư', 'ư', 'ư ư', '0000-00-00 00:00:00'),
-(21, 'ư', 'ư', 'ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ư ', '0000-00-00 00:00:00'),
-(22, 'a', 'a', 'assssssssssssssssssssssssssssz', '0000-00-00 00:00:00'),
-(23, 'a', 's', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(24, 's', 'z', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(25, 's', 's', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(26, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(27, 'c', 'v', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(28, 'z', 'v', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(29, 'z', 'x', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(30, 'x', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(31, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(32, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(33, 'z', 'c', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(34, 'z', 'v', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '0000-00-00 00:00:00'),
-(40, 'Mạnh', 'lgkidz@gmail.com', 'ahihi', '2017-10-24 23:22:24');
+(1, 'Chi', 'chi@gmail.com', 'cái này thú vị đấy', '2017-11-18 17:35:04');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaitrasua`
+-- Table structure for table `loaitrasua`
 --
 
 CREATE TABLE `loaitrasua` (
@@ -160,12 +120,10 @@ CREATE TABLE `loaitrasua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loaitrasua`
+-- Dumping data for table `loaitrasua`
 --
 
 INSERT INTO `loaitrasua` (`ma_loai_ts`, `ten_loai`) VALUES
-(-1, 'Loại này để test'),
-(1, 'loại này cũng để test'),
 (2, 'trà sữa'),
 (3, 'đá bào'),
 (4, 'kem cheese');
@@ -173,7 +131,7 @@ INSERT INTO `loaitrasua` (`ma_loai_ts`, `ten_loai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhanvien`
+-- Table structure for table `nhanvien`
 --
 
 CREATE TABLE `nhanvien` (
@@ -181,22 +139,20 @@ CREATE TABLE `nhanvien` (
   `ten_nv` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sdt` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dia_chi` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ten_dang_nhap` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mat_khau` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
+  `dia_chi` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `nhanvien`
+-- Dumping data for table `nhanvien`
 --
 
-INSERT INTO `nhanvien` (`ma_nv`, `ten_nv`, `sdt`, `email`, `dia_chi`, `ten_dang_nhap`, `mat_khau`) VALUES
-(-1, 'nhân viên Mạnh', '1', '@', '@', 'nv-1', '000000');
+INSERT INTO `nhanvien` (`ma_nv`, `ten_nv`, `sdt`, `email`, `dia_chi`) VALUES
+(-1, 'nhân viên mặc định', '1', '@', '@');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thanhvien`
+-- Table structure for table `thanhvien`
 --
 
 CREATE TABLE `thanhvien` (
@@ -211,26 +167,17 @@ CREATE TABLE `thanhvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `thanhvien`
+-- Dumping data for table `thanhvien`
 --
 
 INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh`, `ten_dn_tv`, `mat_khau_tv`) VALUES
-(1, 'thằng này ko cần tên', '001', '@', '@', 1, 'tv1', '000000'),
-(2, 'thành viên', '000001', 'aa', 'aaaas@a', 0, 'tv2', '000000'),
-(3, 'abc', '1122553', 'á', 'fasf', 0, 'áadga', '000000'),
-(4, 'akshbfahkg', '22', 'dzg ha n', 'okay', 1, 'umok', '222222'),
-(5, 'newone', '2222', 'asdhn', 'manh', 0, 'GG', '000000'),
-(6, 'josh', '3333333', 'xx', 'xx', 1, 'josh', '000000'),
-(8, 'tên nữa', '8888', 'HCM', 'xxx@gmail.com', 0, 'kakaa', '000000'),
-(9, 'tên tiếp thep', '5555555', 'laos', 'lol@gmai.com', 1, 'lololol', '0000000'),
-(10, 'tên thử', '641068', 'tôi là ai? đây là đâu?', 'email@email.com', 0, 'emailemail', '000000'),
-(11, 'tên cuối', '33252544', 'sao hỏa', 'mars@nasa.gov', 1, 'alien', '111111'),
-(14, 'Mạnh', '0974232266', 'Hà Nội', 'lgkidz@gmail.com', 0, '', '000000');
+(14, 'Mạnh', '0974232266', 'Hà Nội', 'lgkidz@gmail.com', 0, '', '000000'),
+(15, 'Chi', '', '', 'chi@gmail.com', 0, '', '123');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tintuc`
+-- Table structure for table `tintuc`
 --
 
 CREATE TABLE `tintuc` (
@@ -242,19 +189,19 @@ CREATE TABLE `tintuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tintuc`
+-- Dumping data for table `tintuc`
 --
 
 INSERT INTO `tintuc` (`ma_tin`, `tieu_de`, `noi_dung`, `gio_dang`, `hinh_anh`) VALUES
-(1, 'this is a cup of tea!', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-03 00:00:00', '../../news_images/cupoftea.png'),
-(7, 'edited', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-02 11:16:51', '../../news_images/MiuTea.png'),
-(10, 'thử xem thế nào', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-09 23:31:19', '../../news_images/MiuTea.png'),
-(11, 'thử unicode', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2017-10-18 23:59:12', '../../news_images/MiuTea.png');
+(1, 'Miutea thành lập!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nibh velit. Donec id orci eu lorem sagittis venenatis. Pellentesque vitae lorem porta odio sodales vulputate eu sit amet nisi. Ut id elit eu libero tempus ullamcorper. Donec eget auctor nulla. Donec mi nisi, tempus sit amet arcu eu, malesuada imperdiet nisi. Vivamus suscipit eget augue quis pellentesque. Sed lobortis nisi vel magna tempus, id rutrum neque dapibus. Vivamus tincidunt convallis aliquam. Mauris malesuada eget tortor non rutrum. Maecenas nisl magna, sollicitudin vel porttitor vitae, tincidunt eget ante.', '2017-10-03 00:00:00', '../../news_images/cupoftea.png'),
+(7, 'Bạn đã thử trà sữa của chúng mình chưa?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nibh velit. Donec id orci eu lorem sagittis venenatis. Pellentesque vitae lorem porta odio sodales vulputate eu sit amet nisi. Ut id elit eu libero tempus ullamcorper. Donec eget auctor nulla. Donec mi nisi, tempus sit amet arcu eu, malesuada imperdiet nisi. Vivamus suscipit eget augue quis pellentesque. Sed lobortis nisi vel magna tempus, id rutrum neque dapibus. Vivamus tincidunt convallis aliquam. Mauris malesuada eget tortor non rutrum. Maecenas nisl magna, sollicitudin vel porttitor vitae, tincidunt eget ante.', '2017-10-02 11:16:51', '../../news_images/MiuTea.png'),
+(10, 'Kem tuyết cho những ngày hè nóng nực?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nibh velit. Donec id orci eu lorem sagittis venenatis. Pellentesque vitae lorem porta odio sodales vulputate eu sit amet nisi. Ut id elit eu libero tempus ullamcorper. Donec eget auctor nulla. Donec mi nisi, tempus sit amet arcu eu, malesuada imperdiet nisi. Vivamus suscipit eget augue quis pellentesque. Sed lobortis nisi vel magna tempus, id rutrum neque dapibus. Vivamus tincidunt convallis aliquam. Mauris malesuada eget tortor non rutrum. Maecenas nisl magna, sollicitudin vel porttitor vitae, tincidunt eget ante.', '2017-10-09 23:31:19', '../../news_images/MiuTea.png'),
+(11, 'Khai trương chuỗi cửa hàng Miutea', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nibh velit. Donec id orci eu lorem sagittis venenatis. Pellentesque vitae lorem porta odio sodales vulputate eu sit amet nisi. Ut id elit eu libero tempus ullamcorper. Donec eget auctor nulla. Donec mi nisi, tempus sit amet arcu eu, malesuada imperdiet nisi. Vivamus suscipit eget augue quis pellentesque. Sed lobortis nisi vel magna tempus, id rutrum neque dapibus. Vivamus tincidunt convallis aliquam. Mauris malesuada eget tortor non rutrum. Maecenas nisl magna, sollicitudin vel porttitor vitae, tincidunt eget ante.', '2017-10-18 23:59:12', '../../news_images/MiuTea.png');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trasua`
+-- Table structure for table `trasua`
 --
 
 CREATE TABLE `trasua` (
@@ -267,19 +214,19 @@ CREATE TABLE `trasua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `trasua`
+-- Dumping data for table `trasua`
 --
 
 INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
 (9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', ''),
 (10, 2, 'Trà sữa Trân Châu', 26000, '01-tra-bi-dao-sb-300x300.jpg', ''),
-(11, 2, 'Trà Sữa Trà Xanh Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', ''),
+(11, 2, 'Trà Sữa Matcha Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', ''),
 (12, 2, 'Trà Sữa Darjeeling', 26000, '02-vai-300x300.jpg', ''),
 (13, 2, 'Trà Sữa Sen', 29000, '03-chanh-day-300x300.jpg', ''),
 (14, 2, 'Trà Sữa Dâu Tây', 26000, '03-hong-tra-sb-300x300.jpg', ''),
 (15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, '04-socola-300x300.jpg', ''),
 (16, 2, 'Trà Sữa Ô Long', 26000, '04-tra-tuoi-sb-300x300.jpg', ''),
-(17, 2, 'Trà Sữa Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', ''),
+(17, 2, 'Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', ''),
 (18, 2, 'Trà Sữa Vani', 29000, '05-darjeeling-300x300.jpg', ''),
 (19, 2, 'Trà Sữa Hạnh Nhân', 29000, '05-la-cay-sb-300x300.jpg', ''),
 (20, 2, 'Trà Sữa Mật Ong', 29000, '06-alisan-sb-300x300.jpg', ''),
@@ -290,7 +237,7 @@ INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, 
 (25, 2, 'Trà Sữa Vải', 23000, '08-o-long-300x300.jpg', ''),
 (26, 2, 'Trà Sữa Gạo Nâu', 29000, '08-quan-am-sb-300x300.jpg', ''),
 (27, 2, 'Trà Sũa Trà Xanh', 26000, '08-xoai-300x300.jpg', ''),
-(28, 3, 'Kem Tuyết Trà Xanh Nhật Bản', 41000, '09-o-long-sb-300x300.jpg', ''),
+(28, 3, 'Kem Tuyết Matcha', 41000, '09-o-long-sb-300x300.jpg', ''),
 (29, 3, 'Kem Tuyết Xoài', 28000, '09-tachi-300x300.jpg', ''),
 (30, 3, 'Kem Tuyết Dâu', 28000, '10-4-mua-xuan-sb-300x300.jpg', ''),
 (31, 3, 'Kem Tuyết Vải', 28000, '10-socola-300x300.jpg', ''),
@@ -311,143 +258,131 @@ INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, 
 (46, 4, 'Hồng Trà Sủi Bọt', 35000, '02-vai-300x300.jpg', '');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`ma_ad`);
 
 --
--- Chỉ mục cho bảng `chitietdonhang`
+-- Indexes for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD KEY `ma_dh` (`ma_dh`),
   ADD KEY `ma_ts` (`ma_ts`);
 
 --
--- Chỉ mục cho bảng `danhgiasp`
---
-ALTER TABLE `danhgiasp`
-  ADD PRIMARY KEY (`ma_ts`);
-
---
--- Chỉ mục cho bảng `donhang`
+-- Indexes for table `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`ma_dh`),
   ADD KEY `ma_nv` (`ma_nv`);
 
 --
--- Chỉ mục cho bảng `feedback`
+-- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`ma_feedback`);
 
 --
--- Chỉ mục cho bảng `loaitrasua`
+-- Indexes for table `loaitrasua`
 --
 ALTER TABLE `loaitrasua`
   ADD PRIMARY KEY (`ma_loai_ts`);
 
 --
--- Chỉ mục cho bảng `nhanvien`
+-- Indexes for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`ma_nv`);
 
 --
--- Chỉ mục cho bảng `thanhvien`
+-- Indexes for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
   ADD PRIMARY KEY (`ma_tv`);
 
 --
--- Chỉ mục cho bảng `tintuc`
+-- Indexes for table `tintuc`
 --
 ALTER TABLE `tintuc`
   ADD PRIMARY KEY (`ma_tin`);
 
 --
--- Chỉ mục cho bảng `trasua`
+-- Indexes for table `trasua`
 --
 ALTER TABLE `trasua`
   ADD PRIMARY KEY (`ma_ts`),
   ADD KEY `ma_loai_ts` (`ma_loai_ts`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT cho bảng `danhgiasp`
---
-ALTER TABLE `danhgiasp`
-  MODIFY `ma_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT cho bảng `donhang`
+-- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
   MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT cho bảng `feedback`
+-- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `ma_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `ma_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT cho bảng `loaitrasua`
+-- AUTO_INCREMENT for table `loaitrasua`
 --
 ALTER TABLE `loaitrasua`
   MODIFY `ma_loai_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT cho bảng `nhanvien`
+-- AUTO_INCREMENT for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   MODIFY `ma_nv` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT cho bảng `thanhvien`
+-- AUTO_INCREMENT for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT cho bảng `tintuc`
+-- AUTO_INCREMENT for table `tintuc`
 --
 ALTER TABLE `tintuc`
   MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT cho bảng `trasua`
+-- AUTO_INCREMENT for table `trasua`
 --
 ALTER TABLE `trasua`
   MODIFY `ma_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chitietdonhang`
+-- Constraints for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`ma_dh`) REFERENCES `donhang` (`ma_dh`);
 
 --
--- Các ràng buộc cho bảng `nhanvien`
+-- Constraints for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD CONSTRAINT `nhanvien_ibfk_1` FOREIGN KEY (`ma_nv`) REFERENCES `donhang` (`ma_nv`);
 
 --
--- Các ràng buộc cho bảng `trasua`
+-- Constraints for table `trasua`
 --
 ALTER TABLE `trasua`
   ADD CONSTRAINT `trasua_ibfk_1` FOREIGN KEY (`ma_loai_ts`) REFERENCES `loaitrasua` (`ma_loai_ts`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
