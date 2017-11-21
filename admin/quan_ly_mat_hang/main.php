@@ -46,7 +46,7 @@
         					<button type="button" class="close" data-dismiss="modal">&times;</button>
         					<h4 class="modal-title">Thay đổi thông tin</h4>
       					</div>
-      					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post">
+      					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post" enctype="multipart/form-data">
       					<div class="modal-body">
         					<table style="width: 100%">
         						<tr class="trr">
@@ -72,8 +72,12 @@
         							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
         						<tr class="trr">
+        							<td>Hình ảnh</td>
+        							<td><input class="form-control" type="file" name="imgx"></td>
+        						</tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>"></td>
         						</tr>
         					</table>
       					</div>
@@ -165,8 +169,12 @@
         							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
         						<tr class="trr">
+        							<td>Hình ảnh</td>
+        							<td><input class="form-control" type="file" name="imgx" value="<?php echo $ob->hinh_anh_ts;?>"></td>
+        						</tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>"></td>
         						</tr>
         					</table>
       					</div>
@@ -258,8 +266,12 @@
         							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
         						<tr class="trr">
+        							<td>Hình ảnh</td>
+        							<td><input class="form-control" type="file" name="imgx" value="<?php echo $ob->hinh_anh_ts;?>"></td>
+        						</tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>"></td>
         						</tr>
         					</table>
       					</div>
@@ -351,8 +363,12 @@
         							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
         						<tr class="trr">
+        							<td>Hình ảnh</td>
+        							<td><input class="form-control" type="file" name="imgx" value="<?php echo $ob->hinh_anh_ts;?>"></td>
+        						</tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>"></td>
         						</tr>
         					</table>
       					</div>

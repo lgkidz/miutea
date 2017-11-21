@@ -16,14 +16,21 @@ class prod_controller{
 		include("main.php");
 	}
 	
-	public function edit($id,$ml,$t,$g,$mt){
-		$this->model->edit($id,$ml,$t,$g,$mt);
+	public function edit($id,$ml,$t,$g,$i,$mt){
+		$this->model->edit($id,$ml,$t,$g,$i,$mt);
 	}
 	public function insert($t,$ml,$i,$g,$mt){
 		$this->model->insert($t,$ml,$i,$g,$mt);
 	}
+	
+	public function deleteImg($img){
+		unlink("../../core_images/$img");
+	}
+	
 	public function delete($id){
-		$this->model->delete($id);
+		$i = $this->model->delete($id);
+		$img = $i->hinh_anh_ts;
+		$this->deleteImg($img);
 	}
 	
 	public function process(){
@@ -44,7 +51,45 @@ class prod_controller{
 				$t = $_POST["ename"];
 				$g = $_POST["eprice"];
 				$mt = $_POST["edes"];
-				$this->edit($id,$ml,$t,$g,$mt);
+			
+				$target_dir = "../../core_images/";
+				$target_file = $target_dir . basename($_FILES["imgx"]["name"]);
+				$i = basename($_FILES["imgx"]["name"]);
+				$imgobject = $this->model->getImage($id);
+				$ix = $imgobject->hinh_anh_ts;
+				if($ix != $i){
+					$uploadOk = 1;
+					$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+					// Check if image file is a actual image or fake image
+    				$check = getimagesize($_FILES["imgx"]["tmp_name"]);
+    				if($check !== false) {
+        				//echo "File is an image - " . $check["mime"] . ".";
+        				$uploadOk = 1;
+    				}
+					else {
+        				echo "File is not an image.";
+        				$uploadOk = 0;
+    				}
+					// Check file size
+					if (file_exists($target_file)) {
+    					$uploadOk = 2;
+					}
+					// Allow certain file formats
+					if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+    					echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    					$uploadOk = 0;
+					}
+					if($uploadOk !=0){
+						move_uploaded_file($_FILES["imgx"]["tmp_name"], $target_file);
+						$imgobject = $this->model->getImage($id);
+						$img = $imgobject->hinh_anh_ts;
+						$this->deleteImg($img);
+						$this->edit($id,$ml,$t,$g,$i,$mt);
+					}
+				}
+				else{
+					$this->edit($id,$ml,$t,$g,$ix,$mt);
+				}
 				$this->listAll();
 				break;
 			}

@@ -48,8 +48,8 @@ class prod_model{
 		return $resultset;
 	}
 	
-	public function edit($id,$ml,$t,$g,$mt){
-		$query = "UPDATE `trasua` SET `ma_loai_ts`='$ml',`ten_ts`='$t',`gia_ts`=$g,`mo_ta`='$mt' WHERE `ma_ts`='$id'";
+	public function edit($id,$ml,$t,$g,$i,$mt){
+		$query = "UPDATE `trasua` SET `ma_loai_ts`='$ml',`ten_ts`='$t',`gia_ts`=$g,`mo_ta`='$mt', `hinh_anh_ts`='$i' WHERE `ma_ts`='$id'";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 	}
@@ -58,10 +58,20 @@ class prod_model{
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 	}
+	
+	public function getImage($id){
+		$statement = $this->con->prepare("SELECT hinh_anh_ts FROM `trasua` WHERE ma_ts = $id");
+		$statement->execute();
+		$img = $statement->fetch(PDO::FETCH_OBJ);
+		return $img;
+	}
+	
 	public function delete($id){
+		$img = $this->getImage($id);
 		$query = "DELETE FROM `trasua` WHERE `ma_ts`=$id";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
+		return $img;
 	}
 }
 ?>

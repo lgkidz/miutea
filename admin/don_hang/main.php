@@ -53,7 +53,7 @@
     							<li><a href="?status=0&id=<?php echo $fb->ma_dh; ?>">Pending</a></li>
     							<li><a href="?status=-1&id=<?php echo $fb->ma_dh; ?>">Canceled</a></li>
   							</ul></span></td>
-							<td><?php echo $fb->ngay_dh; ?></td>
+							<td><?php echo date_format(date_create($fb->ngay_dh),"H:i:s - d/m/Y"); ?></td>
 						</tr>
 					<?php } ?>
        				 </tbody>

@@ -23,7 +23,7 @@
 		<td><?php echo $fb->ten_nguoi_lh; ?></td>
 		<td><?php echo $fb->email_nguoi_lh; ?></td>
 		<td><?php echo $fb->noi_dung; ?></td>
-		<td><?php echo $fb->ngay_lh; ?></td>
+		<td><?php echo date_format(date_create($fb->ngay_lh),"H:i:s - d/m/Y"); ?></td>
 	</tr>
 	<?php } ?>
         </tbody>

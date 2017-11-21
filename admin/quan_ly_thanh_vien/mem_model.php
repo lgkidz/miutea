@@ -24,5 +24,16 @@ class mem_model{
 		$resultset = $statement->fetchAll(PDO::FETCH_OBJ);
 		return $resultset;
 	}
+	
+	public function ban($id){
+		$query = "UPDATE `thanhvien` SET `ban`= 1 WHERE ma_tv=$id";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+	}
+	public function unban($id){
+		$query = "UPDATE `thanhvien` SET `ban`= 0 WHERE ma_tv=$id";
+		$statement = $this->con->prepare($query);
+		$statement->execute();
+	}
 }
 ?>

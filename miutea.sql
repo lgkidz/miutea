@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 20, 2017 at 06:16 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.0.8
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 21, 2017 lúc 04:06 PM
+-- Phiên bản máy phục vụ: 10.1.21-MariaDB
+-- Phiên bản PHP: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id3650129_miutea`
+-- Cơ sở dữ liệu: `miutea`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Cấu trúc bảng cho bảng `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,7 +36,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `admin`
+-- Đang đổ dữ liệu cho bảng `admin`
 --
 
 INSERT INTO `admin` (`ma_ad`, `ten_dn_ad`, `mat_khau`, `ten_ad`) VALUES
@@ -43,7 +45,7 @@ INSERT INTO `admin` (`ma_ad`, `ten_dn_ad`, `mat_khau`, `ten_ad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietdonhang`
+-- Cấu trúc bảng cho bảng `chitietdonhang`
 --
 
 CREATE TABLE `chitietdonhang` (
@@ -55,7 +57,7 @@ CREATE TABLE `chitietdonhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `chitietdonhang`
+-- Đang đổ dữ liệu cho bảng `chitietdonhang`
 --
 
 INSERT INTO `chitietdonhang` (`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`) VALUES
@@ -65,7 +67,7 @@ INSERT INTO `chitietdonhang` (`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donhang`
+-- Cấu trúc bảng cho bảng `donhang`
 --
 
 CREATE TABLE `donhang` (
@@ -80,7 +82,7 @@ CREATE TABLE `donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `donhang`
+-- Đang đổ dữ liệu cho bảng `donhang`
 --
 
 INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `email`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
@@ -90,7 +92,7 @@ INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `email`, `ngay_dh`, `noi_giao`, `sdt`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- Cấu trúc bảng cho bảng `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -102,7 +104,7 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `feedback`
+-- Đang đổ dữ liệu cho bảng `feedback`
 --
 
 INSERT INTO `feedback` (`ma_feedback`, `ten_nguoi_lh`, `email_nguoi_lh`, `noi_dung`, `ngay_lh`) VALUES
@@ -111,7 +113,7 @@ INSERT INTO `feedback` (`ma_feedback`, `ten_nguoi_lh`, `email_nguoi_lh`, `noi_du
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaitrasua`
+-- Cấu trúc bảng cho bảng `loaitrasua`
 --
 
 CREATE TABLE `loaitrasua` (
@@ -120,7 +122,7 @@ CREATE TABLE `loaitrasua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `loaitrasua`
+-- Đang đổ dữ liệu cho bảng `loaitrasua`
 --
 
 INSERT INTO `loaitrasua` (`ma_loai_ts`, `ten_loai`) VALUES
@@ -131,7 +133,7 @@ INSERT INTO `loaitrasua` (`ma_loai_ts`, `ten_loai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nhanvien`
+-- Cấu trúc bảng cho bảng `nhanvien`
 --
 
 CREATE TABLE `nhanvien` (
@@ -143,7 +145,7 @@ CREATE TABLE `nhanvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `nhanvien`
+-- Đang đổ dữ liệu cho bảng `nhanvien`
 --
 
 INSERT INTO `nhanvien` (`ma_nv`, `ten_nv`, `sdt`, `email`, `dia_chi`) VALUES
@@ -152,7 +154,7 @@ INSERT INTO `nhanvien` (`ma_nv`, `ten_nv`, `sdt`, `email`, `dia_chi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thanhvien`
+-- Cấu trúc bảng cho bảng `thanhvien`
 --
 
 CREATE TABLE `thanhvien` (
@@ -163,21 +165,22 @@ CREATE TABLE `thanhvien` (
   `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gioi_tinh` tinyint(4) NOT NULL,
   `ten_dn_tv` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mat_khau_tv` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
+  `mat_khau_tv` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ban` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `thanhvien`
+-- Đang đổ dữ liệu cho bảng `thanhvien`
 --
 
-INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh`, `ten_dn_tv`, `mat_khau_tv`) VALUES
-(14, 'Mạnh', '0974232266', 'Hà Nội', 'lgkidz@gmail.com', 0, '', '000000'),
-(15, 'Chi', '', '', 'chi@gmail.com', 0, '', '123');
+INSERT INTO `thanhvien` (`ma_tv`, `ten_tv`, `sdt`, `diachi`, `email`, `gioi_tinh`, `ten_dn_tv`, `mat_khau_tv`, `ban`) VALUES
+(14, 'Mạnh', '0974232266', 'Hà Nội', 'lgkidz@gmail.com', 0, '', '000000', 0),
+(15, 'Chi', '', '', 'chi@gmail.com', 0, '', '123', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tintuc`
+-- Cấu trúc bảng cho bảng `tintuc`
 --
 
 CREATE TABLE `tintuc` (
@@ -189,7 +192,7 @@ CREATE TABLE `tintuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tintuc`
+-- Đang đổ dữ liệu cho bảng `tintuc`
 --
 
 INSERT INTO `tintuc` (`ma_tin`, `tieu_de`, `noi_dung`, `gio_dang`, `hinh_anh`) VALUES
@@ -201,7 +204,7 @@ INSERT INTO `tintuc` (`ma_tin`, `tieu_de`, `noi_dung`, `gio_dang`, `hinh_anh`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `trasua`
+-- Cấu trúc bảng cho bảng `trasua`
 --
 
 CREATE TABLE `trasua` (
@@ -214,7 +217,7 @@ CREATE TABLE `trasua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `trasua`
+-- Đang đổ dữ liệu cho bảng `trasua`
 --
 
 INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
@@ -225,7 +228,6 @@ INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, 
 (13, 2, 'Trà Sữa Sen', 29000, '03-chanh-day-300x300.jpg', ''),
 (14, 2, 'Trà Sữa Dâu Tây', 26000, '03-hong-tra-sb-300x300.jpg', ''),
 (15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, '04-socola-300x300.jpg', ''),
-(16, 2, 'Trà Sữa Ô Long', 26000, '04-tra-tuoi-sb-300x300.jpg', ''),
 (17, 2, 'Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', ''),
 (18, 2, 'Trà Sữa Vani', 29000, '05-darjeeling-300x300.jpg', ''),
 (19, 2, 'Trà Sữa Hạnh Nhân', 29000, '05-la-cay-sb-300x300.jpg', ''),
@@ -258,131 +260,132 @@ INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, 
 (46, 4, 'Hồng Trà Sủi Bọt', 35000, '02-vai-300x300.jpg', '');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `admin`
+-- Chỉ mục cho bảng `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`ma_ad`);
 
 --
--- Indexes for table `chitietdonhang`
+-- Chỉ mục cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD KEY `ma_dh` (`ma_dh`),
   ADD KEY `ma_ts` (`ma_ts`);
 
 --
--- Indexes for table `donhang`
+-- Chỉ mục cho bảng `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`ma_dh`),
   ADD KEY `ma_nv` (`ma_nv`);
 
 --
--- Indexes for table `feedback`
+-- Chỉ mục cho bảng `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`ma_feedback`);
 
 --
--- Indexes for table `loaitrasua`
+-- Chỉ mục cho bảng `loaitrasua`
 --
 ALTER TABLE `loaitrasua`
   ADD PRIMARY KEY (`ma_loai_ts`);
 
 --
--- Indexes for table `nhanvien`
+-- Chỉ mục cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`ma_nv`);
 
 --
--- Indexes for table `thanhvien`
+-- Chỉ mục cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
   ADD PRIMARY KEY (`ma_tv`);
 
 --
--- Indexes for table `tintuc`
+-- Chỉ mục cho bảng `tintuc`
 --
 ALTER TABLE `tintuc`
   ADD PRIMARY KEY (`ma_tin`);
 
 --
--- Indexes for table `trasua`
+-- Chỉ mục cho bảng `trasua`
 --
 ALTER TABLE `trasua`
   ADD PRIMARY KEY (`ma_ts`),
   ADD KEY `ma_loai_ts` (`ma_loai_ts`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
   MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `donhang`
+-- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
   MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `feedback`
+-- AUTO_INCREMENT cho bảng `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `ma_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `loaitrasua`
+-- AUTO_INCREMENT cho bảng `loaitrasua`
 --
 ALTER TABLE `loaitrasua`
   MODIFY `ma_loai_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `nhanvien`
+-- AUTO_INCREMENT cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
   MODIFY `ma_nv` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `thanhvien`
+-- AUTO_INCREMENT cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
   MODIFY `ma_tv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT for table `tintuc`
+-- AUTO_INCREMENT cho bảng `tintuc`
 --
 ALTER TABLE `tintuc`
   MODIFY `ma_tin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT for table `trasua`
+-- AUTO_INCREMENT cho bảng `trasua`
 --
 ALTER TABLE `trasua`
   MODIFY `ma_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `chitietdonhang`
+-- Các ràng buộc cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`ma_dh`) REFERENCES `donhang` (`ma_dh`);
 
 --
--- Constraints for table `nhanvien`
+-- Các ràng buộc cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD CONSTRAINT `nhanvien_ibfk_1` FOREIGN KEY (`ma_nv`) REFERENCES `donhang` (`ma_nv`);
 
 --
--- Constraints for table `trasua`
+-- Các ràng buộc cho bảng `trasua`
 --
 ALTER TABLE `trasua`
   ADD CONSTRAINT `trasua_ibfk_1` FOREIGN KEY (`ma_loai_ts`) REFERENCES `loaitrasua` (`ma_loai_ts`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

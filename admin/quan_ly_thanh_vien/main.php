@@ -13,12 +13,12 @@
                   <ul class="users-list clearfix">
                     <?php foreach($member as $mb){ ?>
                     <li data-toggle="modal" data-target="#md<?php echo $mb->ma_tv?>">
-                      <img height="128" width="128" src="../../core_images/MiuTea.png" alt="User Image">
+                      <img height="128" width="128" <?php echo $mb->ban==1?'style="opacity: 0.5;"':'style="opacity: 1;"' ?> src="../../core_images/MiuTea.png" alt="User Image">
                       <a class="users-list-name" ><?php echo $mb->ten_tv; ?></a>
                       <span class="users-list-date"><?php echo $mb->email; ?></span>
                       
                     </li>
-                    <div id="md<?php echo $mb->ma_tv?>" class="modal fade" role="dialog">
+                    <div id="md<?php $id = $mb->ma_tv; echo $id?>" class="modal fade" role="dialog">
   				<div class="modal-dialog">
     			<!-- Modal content-->
     				<div class="modal-content">
@@ -31,6 +31,12 @@
         					<h4>Địa chỉ: <?php echo $mb->diachi; ?></h4>
         					<h4>Email: <?php echo $mb->email; ?></h4>
         					<h4>Giới tính: <?php echo $mb->gioi_tinh==0?"nữ":"nam"; ?></h4>
+        					<?php  if($mb->ban==0){?>
+        						<a href="?action=ban&id=<?php echo $id;?>" onClick="return confirm('Bạn muốn khóa tài khoản này?');"><button class="btn btn-danger">Khoá tài khoản này</button></a>
+        					<?php }else{?>
+        						<a href="?action=unban&id=<?php echo $id;?>" onClick="return confirm('Bạn muốn mở khóa tài khoản này?');"><button class="btn btn-success">Mở khoá tài khoản này</button></a>
+        					<?php } ?>
+        					
       					</div>
       					<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Okay</button>

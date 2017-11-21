@@ -16,7 +16,7 @@
 <input type="password" id="dnpassword" name="dnpassword" class="form-control" placeholder="Password" required>
 <span class="help-block with-errors"></span>
 </div>
-<span style="color: red"><?php if(isset($_GET["loginerror"])) echo "Tài khoản đăng nhập hoặc mật khấu sai";?></span>
+<span style="color: red"><?php if(isset($_GET["loginerror"])){if($_GET["loginerror"]==1) echo "Tài khoản đăng nhập hoặc mật khấu sai"; else if($_GET["loginerror"]==4) echo "Tài khoản này đã bị khóa";}?></span>
 <input type="submit" id="dangnhap" name="dangnhap" value="ĐĂNG NHẬP" class="btn btn-default btn-lg btn-block">
 </form>
 

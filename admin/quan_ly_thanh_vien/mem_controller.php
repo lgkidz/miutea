@@ -15,9 +15,31 @@ class mem_controller{
 	public function listSome(){
 		$member = $this->model->listSome();
 		include("main.php");
-	} 
+	}
+	
+	public function ban($id){
+		$this->model->ban($id);
+	}
+	
+	public function unban($id){
+		$this->model->unban($id);
+	}
 	
 	public function process(){
+		if(isset($_GET["action"])){
+			$action = $_GET["action"];
+		}
+		else{
+			$action = "none";
+		}
+		if($action == "ban"){
+			$id = $_GET["id"];
+			$this->ban($id);
+		}
+		if($action == "unban"){
+			$id = $_GET["id"];
+			$this->unban($id);
+		}
 		if(isset($_GET["view"])){
 			$v = $_GET["view"];
 		}

@@ -23,9 +23,9 @@
 		<td><?php echo $ob->tieu_de; ?></td>
 		<td><img height="128" width="128" src="../../news/img/<?php echo $ob->hinh_anh; ?>"></td>
 		<td><textarea style="width:400px" readonly><?php echo $ob->noi_dung; ?></textarea></td>
-		<td><?php echo $ob->gio_dang; ?></td>
+		<td><?php echo date_format(date_create($ob->gio_dang),"H:i:s - d/m/Y"); ?></td>
 		<td>
-			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_tin;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');">Xóa tin này</a>
+			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_tin;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');"><button class="btn btn-danger">Xóa tin này</button></a>
 		</td>
 	</tr>
 	<?php } ?>

@@ -25,7 +25,10 @@ if(isset($_POST["dangnhap"])){
 	if($mdn == "n/a" || $pas == "n/a"){
 		header("location: ../dangnhap.php?loginerror=1");
 	}
-	if($rert->mat_khau_tv == $pas){
+	if($rert->ban == 1){
+		header("location: ../dangnhap.php?loginerror=4");
+	}
+	else if($rert->mat_khau_tv == $pas){
 		session_start();
 		$_SESSION["user_name"] = $rert->ten_tv;
 		$_SESSION["email"] = $rert->email;
