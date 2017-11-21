@@ -1,3 +1,8 @@
+<style>
+	.trr{
+		height: 42px;
+	}
+</style>
 <div class="content-wrapper">
 	<section class="content">
            <div class="nav-tabs-custom">
@@ -32,8 +37,8 @@
 		<td><img height="128" width="128" src="../../core_images/<?php echo $ob->hinh_anh_ts; ?>"></td>
 		<td><?php echo $ob->mo_ta; ?></td>
 		<td>
-			<button type="button" data-toggle="modal" data-target="#md<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
-			<div id="md<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#mda<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
+			<div id="mda<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
   				<div class="modal-dialog">
     			<!-- Modal content-->
     				<div class="modal-content">
@@ -43,32 +48,32 @@
       					</div>
       					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post">
       					<div class="modal-body">
-        					<table style="width:100%;">
-        						<tr>
+        					<table style="width: 100%">
+        						<tr class="trr">
         							<td>Mã ts</td>
-        							<td><input type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
+        							<td><input class="form-control" type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Tên</td>
-        							<td><input type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
+        							<td><input class="form-control" type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Loại</td>
         							<td>
-        								<select name="ek">
+        								<select class="form-control" name="ek">
         									<?php foreach($ml as $m){ ?>
 												<option value="<?php echo $m->ma_loai_ts; ?>"><?php echo $m->ten_loai; ?></option>
         									<?php }?>
         								</select>
         							</td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Giá</td>
-        							<td><input type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
+        							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
         						</tr>
         					</table>
       					</div>
@@ -82,7 +87,7 @@
 		</td>
 		<td>
 			
-			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');">Xóa Sản phẩm</a>
+			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');"><button class="btn btn-danger">Xóa Sản phẩm</button></a>
 		</td>
 	</tr>
 	<?php } ?>
@@ -125,8 +130,8 @@
 		<td><img height="128" width="128" src="../../core_images/<?php echo $ob->hinh_anh_ts; ?>"></td>
 		<td><?php echo $ob->mo_ta; ?></td>
 		<td>
-			<button type="button" data-toggle="modal" data-target="#md<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
-			<div id="md<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#mdt<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
+			<div id="mdt<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
   				<div class="modal-dialog">
     			<!-- Modal content-->
     				<div class="modal-content">
@@ -137,31 +142,31 @@
       					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post">
       					<div class="modal-body">
         					<table style="width:100%;">
-        						<tr>
+        						<tr class="trr">
         							<td>Mã ts</td>
-        							<td><input type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
+        							<td><input class="form-control" class="form-control" type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Tên</td>
-        							<td><input type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
+        							<td><input class="form-control" type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Loại</td>
         							<td>
-        								<select name="ek">
+        								<select class="form-control" name="ek">
         									<?php foreach($ml as $m){ ?>
 												<option value="<?php echo $m->ma_loai_ts; ?>"><?php echo $m->ten_loai; ?></option>
         									<?php }?>
         								</select>
         							</td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Giá</td>
-        							<td><input type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
+        							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
         						</tr>
         					</table>
       					</div>
@@ -175,7 +180,7 @@
 		</td>
 		<td>
 			
-			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');">Xóa Sản phẩm</a>
+			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');"><button class="btn btn-danger">Xóa Sản phẩm</button></a>
 		</td>
 	</tr>
 	<?php } ?>
@@ -218,8 +223,8 @@
 		<td><img height="128" width="128" src="../../core_images/<?php echo $ob->hinh_anh_ts; ?>"></td>
 		<td><?php echo $ob->mo_ta; ?></td>
 		<td>
-			<button type="button" data-toggle="modal" data-target="#md<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
-			<div id="md<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#mdk<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
+			<div id="mdk<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
   				<div class="modal-dialog">
     			<!-- Modal content-->
     				<div class="modal-content">
@@ -230,31 +235,31 @@
       					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post">
       					<div class="modal-body">
         					<table style="width:100%;">
-        						<tr>
+        						<tr class="trr">
         							<td>Mã ts</td>
-        							<td><input type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
+        							<td><input class="form-control" type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Tên</td>
-        							<td><input type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
+        							<td><input class="form-control" type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Loại</td>
         							<td>
-        								<select name="ek">
+        								<select class="form-control" name="ek">
         									<?php foreach($ml as $m){ ?>
 												<option value="<?php echo $m->ma_loai_ts; ?>"><?php echo $m->ten_loai; ?></option>
         									<?php }?>
         								</select>
         							</td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Giá</td>
-        							<td><input type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
+        							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
         						</tr>
         					</table>
       					</div>
@@ -268,7 +273,7 @@
 		</td>
 		<td>
 			
-			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');">Xóa Sản phẩm</a>
+			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');"><button class="btn btn-danger">Xóa Sản phẩm</button></a>
 		</td>
 	</tr>
 	<?php } ?>
@@ -311,8 +316,8 @@
 		<td><img height="128" width="128" src="../../core_images/<?php echo $ob->hinh_anh_ts; ?>"></td>
 		<td><?php echo $ob->mo_ta; ?></td>
 		<td>
-			<button type="button" data-toggle="modal" data-target="#md<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
-			<div id="md<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#mdd<?php echo $ob->ma_ts?>">Chỉnh sửa</button>
+			<div id="mdd<?php echo $ob->ma_ts?>" class="modal fade" role="dialog">
   				<div class="modal-dialog">
     			<!-- Modal content-->
     				<div class="modal-content">
@@ -323,31 +328,31 @@
       					<form action="index.php?action=edit&id=<?php echo $ob->ma_ts?>"  method="post">
       					<div class="modal-body">
         					<table style="width:100%;">
-        						<tr>
+        						<tr class="trr">
         							<td>Mã ts</td>
-        							<td><input type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
+        							<td><input class="form-control" type="text" name="eid" value="<?php echo $ob->ma_ts;?>" readonly></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Tên</td>
-        							<td><input type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
+        							<td><input class="form-control" type="text" name="ename" value="<?php echo $ob->ten_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Loại</td>
         							<td>
-        								<select name="ek">
+        								<select class="form-control" name="ek">
         									<?php foreach($ml as $m){ ?>
 												<option value="<?php echo $m->ma_loai_ts; ?>"><?php echo $m->ten_loai; ?></option>
         									<?php }?>
         								</select>
         							</td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Giá</td>
-        							<td><input type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
+        							<td><input class="form-control" type="number" name="eprice" value="<?php echo $ob->gia_ts;?>" required></td>
         						</tr>
-        						<tr>
+        						<tr class="trr">
         							<td>Mô tả</td>
-        							<td><input type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
+        							<td><input class="form-control" type="text" name="edes" value="<?php echo $ob->mo_ta;?>" required></td>
         						</tr>
         					</table>
       					</div>
@@ -361,7 +366,7 @@
 		</td>
 		<td>
 			
-			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');">Xóa Sản phẩm</a>
+			<a style="color:red" href="index.php?action=delete&id=<?php echo $ob->ma_ts;?>" onClick="return confirm('Bạn thật sự muốn xóa sản phẩm này?');"><button class="btn btn-danger">Xóa Sản phẩm</button></a>
 		</td>
 	</tr>
 	<?php } ?>

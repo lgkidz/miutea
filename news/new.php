@@ -1,6 +1,6 @@
 <style>
 body {
-	font-family: Helvetica Neue;
+	font-family: Arial;
 	font-size: 14px;	
 }
 * {

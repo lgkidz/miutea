@@ -19,7 +19,7 @@ session_start();
 <style>
 body, html {
 	height: 100%;
-	font-family: Helvetica Neue;
+	font-family: Arial;
 	font-size: 14px;	
 }
 #lienhe {

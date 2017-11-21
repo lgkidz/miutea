@@ -38,7 +38,7 @@ function onClick(element) {
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 body {
-	font-family: Helvetica Neue;
+	font-family: Arial;
 	font-size: 14px;	
 }
 </style>
