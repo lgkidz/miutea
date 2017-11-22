@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php
 session_start();
 ?>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,6 +15,12 @@ session_start();
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+body {
+	font-family: Arial;
+	font-size: 14px;	
+}
+</style>
 	</head>
 	<body>
 	<?php include('header.php');?>

@@ -156,6 +156,11 @@
             <i class="fa fa-group"></i> <span>Quản lý admin</span>
           </a>
         </li>
+        <li>
+          <a href="../subscribers/">
+            <i class="fa fa-envelope"></i> <span>Subscribers, mailing</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

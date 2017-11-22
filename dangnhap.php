@@ -1,6 +1,8 @@
 <?php
 	session_start();
 ?>
+<!DOCTYPE html>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -92,12 +94,14 @@
 <h4 align="left">Theo dõi chúng tôi để nhận được những điều thú vị</h4>
 <hr />
   <div class="row">
+       <form method="post" action="mailer.php">
         <div class="col-sm-8 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="text">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
          <div class="col-sm-1 form-group">
-          <a href="news/"><button class="btn btn-default pull-right" type="button">Theo dõi</button></a>
+          <input class="btn btn-default pull-right" type="submit" value="Theo dõi">
         </div>
+        </form>
 			</div>
       <br> <br> <br>
       <div class="row">
@@ -116,6 +120,18 @@
 
 </footer>
 	</div>
-    
+   <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a0eae2abb0c3f433d4c9be0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->   
 </body>
 </html>

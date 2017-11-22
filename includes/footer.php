@@ -23,12 +23,14 @@
 <h4 align="left">Theo dõi chúng tôi để nhận được những điều thú vị</h4>
 <hr />
   <div class="row">
+       <form method="post" action="mailer.php">
         <div class="col-sm-8 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="text">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
          <div class="col-sm-1 form-group">
-          <a href="news/"><button class="btn btn-default pull-right" type="button">Theo dõi</button></a>
+          <input class="btn btn-default pull-right" type="submit" value="Theo dõi">
         </div>
+        </form>
 			</div>
       <br> <br> <br>
       <div class="row">

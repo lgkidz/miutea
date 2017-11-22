@@ -20,7 +20,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Đăng nhập</title>
+<title><?php echo $ob->ten_ts;?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -84,10 +84,10 @@
 							line-height: normal;
 							font-size: 14px;
 						}
-						li{
+						#monthemul li{
 							padding-left: 20px;
 						}
-						li label{
+						#monthemul li label{
 							padding: 5px 10px 5px 30px;
 							border-bottom: 1px dotted #c0c0c0;
 							line-height: normal;
@@ -96,6 +96,16 @@
 						}
 						.monthemcheckbox{
 							border: none;
+						}
+						.rate-outline{
+							height: 4px;
+							width: 222px;
+							border: 1px solid #FF0004;
+						}
+						.rate-percentage{
+							background: #FF0004;
+							height: 3px;
+							width: 0px;
 						}
 					</style>
 <script>
@@ -122,12 +132,20 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=357388931388947';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
  <nav class="navbar navbar-default">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.php">MiuTea</a> </div>
+      <a class="navbar-brand" href="../index.php">MiuTea</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -166,7 +184,7 @@
 <div class="container-fluid">
 	 <img style="width: 100%;" src="../core_images/content.jpg">
 </div>    
-<div id="content" class="container" style="margin-top: 50px;margin-bottom: 250px;">
+<div id="content" class="container" style="margin-top: 50px;">
         <div class="row">
         	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         		<img height="600" width="600" src="../core_images/<?php echo $ob->hinh_anh_ts;?>" alt="Thumbnail Image 1" class="img-responsive">
@@ -260,7 +278,7 @@
         			<div style="float: left" class="dropdown">
   						<div class="monthembox" data-toggle="dropdown">Chọn món thêm
   						<span style="margin-left:100px;" class="caret"></span></div>
-  						<ul style="width: 270px" class="dropdown-menu">
+  						<ul style="width: 270px" class="dropdown-menu" id="monthemul">
    						<?php foreach($monthem as $mt){ ?>
     						<li>
 								<input class="monthemcheckbox" type="checkbox" onChange="monthem(this);" id="mt<?php echo $mt->ma_mt;?>" name="<?php echo $mt->ten_mt;?>" data-price="<?php echo $mt->gia_mt;?>" value="<?php echo $mt->gia_mt;?>">
@@ -277,7 +295,78 @@
         	</div>
         </div>
 </div>
-    
+   <div class="container">
+   	<h3>Đánh giá</h3>
+   	<hr>
+   	<?php 
+				$totalrate = $ob->saoI + $ob->saoII+ $ob->saoIII+ $ob->saoIV+ $ob->saoV;
+				if($totalrate == 0){
+					$x5 = 0;
+					$x4 = 0;
+					$x3 = 0;
+					$x2 = 0;
+					$x1 = 0;
+					$average = 0;
+				}
+				else{
+					$x5 = $ob->saoV/$totalrate * 100;
+					$x4 = $ob->saoIV/$totalrate * 100;
+					$x3 = $ob->saoIII/$totalrate * 100;
+					$x2 = $ob->saoII/$totalrate * 100;
+					$x1 = $ob->saoI/$totalrate * 100;
+					$average = ($ob->saoI + $ob->saoII*2 + $ob->saoIII*3 + $ob->saoIV *4 + $ob->saoV*5)/$totalrate;
+				}
+			?>
+   	<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+   		<div style="border-right: 1px dashed grey;text-align: center;margin-top: 10px;margin-bottom: 10px;" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   			<h4>Đánh giá trung bình</h4>
+   			<h5 style="opacity: 0.7">(có <?php echo $totalrate;?> lượt đánh giá)</h5>
+   			<p style="font-size: 40px;margin: 5px;"><?php echo number_format($average,1);?></p>
+   		</div>
+   		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+   			
+   			<table style="width: 100%;margin-top: 20px;">
+   				<tr>
+   					<td>Rất tốt</td>
+   					<td><div class="rate-outline"><div class="rate-percentage" style="width: <?php echo $x5;?>%;"></div></div></td>
+   					<td style="opacity: 0.8"><?php echo $ob->saoV;?> </td>
+   					<td style="opacity: 0.7;padding-left: 5px;"><?php $link ="<a href='rate.php?s=5&id=$ob->ma_ts'>đánh giá</a>"; echo isset($_SESSION["userlegal"])?$link:'đánh giá'?></td>
+   				</tr>
+   				<tr>
+   					<td>Tốt</td>
+   					<td><div class="rate-outline"><div class="rate-percentage" style="width: <?php echo $x4;?>%;"></div></div></td>
+   					<td style="opacity: 0.8"><?php echo $ob->saoIV;?> </td>
+   					<td style="opacity: 0.7;padding-left: 5px;"><?php $link ="<a href='rate.php?s=4&id=$ob->ma_ts'>đánh giá</a>"; echo isset($_SESSION["userlegal"])?$link:'đánh giá'?></td>
+   				</tr>
+   				<tr>
+   					<td>Trung bình</td>
+   					<td><div class="rate-outline"><div class="rate-percentage" style="width: <?php echo $x3;?>%;"></div></div></td>
+   					<td style="opacity: 0.8"><?php echo $ob->saoIII;?> </td>
+   					<td style="opacity: 0.7;padding-left: 5px;"><?php $link ="<a href='rate.php?s=3&id=$ob->ma_ts'>đánh giá</a>"; echo isset($_SESSION["userlegal"])?$link:'đánh giá'?></td>
+   				</tr>
+   				<tr>
+   					<td>Không tốt</td>
+   					<td><div class="rate-outline"><div class="rate-percentage" style="width: <?php echo $x2;?>%;"></div></div></td>
+   					<td style="opacity: 0.8"><?php echo $ob->saoII;?> </td>
+   					<td style="opacity: 0.7;padding-left: 5px;"><?php $link ="<a href='rate.php?s=2&id=$ob->ma_ts'>đánh giá</a>"; echo isset($_SESSION["userlegal"])?$link:'đánh giá'?></td>
+   				</tr>
+   				<tr>
+   					<td>Rất tệ</td>
+   					<td><div class="rate-outline"><div class="rate-percentage" style="width: <?php echo $x1;?>%;"></div></div></td>
+   					<td style="opacity: 0.8"><?php echo $ob->saoI;?> </td>
+   					<td style="opacity: 0.7;padding-left: 5px;"><?php $link ="<a href='rate.php?s=1&id=$ob->ma_ts'>đánh giá</a>"; echo isset($_SESSION["userlegal"])?$link:'đánh giá'?></td>
+   				</tr>
+   			</table>
+   		</div>
+   	</div>
+   	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   		<hr>
+   		<h3>Bình luận</h3>
+   	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   		<div class="fb-comments" data-href="<?php echo $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>" data-numposts="5"></div>
+   	</div>
+   	</div>
+   </div>    
     <div id="footer">
     <footer>
   <a class="up-arrow" id="to_top" data-toggle="tooltip" title="Go to top">
@@ -303,14 +392,14 @@
         <div class="col-sm-6">
 <h4 align="left">Theo dõi chúng tôi để nhận được những điều thú vị</h4>
 <hr />
-  <div class="row">
+  <form method="post" action="../mailer.php">
         <div class="col-sm-8 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="text">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
          <div class="col-sm-1 form-group">
-          <a href="news/"><button class="btn btn-default pull-right" type="button">Theo dõi</button></a>
+          <input class="btn btn-default pull-right" type="submit" value="Theo dõi">
         </div>
-			</div>
+        </form>
       <br> <br> <br>
       <div class="row">
 		  <div class="col-sm-4 form-group"> </div>
@@ -328,6 +417,18 @@
 
 </footer>
 	</div>
-    
+     <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a0eae2abb0c3f433d4c9be0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--> 
 </body>
 </html>

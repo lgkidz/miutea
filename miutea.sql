@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2017 lúc 06:31 AM
+-- Thời gian đã tạo: Th10 22, 2017 lúc 05:34 PM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -174,6 +174,25 @@ INSERT INTO `nhanvien` (`ma_nv`, `ten_nv`, `sdt`, `email`, `dia_chi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `subscribers`
+--
+
+CREATE TABLE `subscribers` (
+  `ma_sub` int(11) NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `subscribers`
+--
+
+INSERT INTO `subscribers` (`ma_sub`, `email`) VALUES
+(1, 'lgkidz1@gmail.com'),
+(4, 'thefirstclone01@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `thanhvien`
 --
 
@@ -234,19 +253,19 @@ CREATE TABLE `trasua` (
   `gia_ts` int(11) NOT NULL,
   `hinh_anh_ts` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mo_ta` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `1sao` int(11) NOT NULL,
-  `2sao` int(11) NOT NULL,
-  `3ao` int(11) NOT NULL,
-  `4sao` int(11) NOT NULL,
-  `5sao` int(11) NOT NULL
+  `saoI` int(11) NOT NULL,
+  `saoII` int(11) NOT NULL,
+  `saoIII` int(11) NOT NULL,
+  `saoIV` int(11) NOT NULL,
+  `saoV` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `trasua`
 --
 
-INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`, `1sao`, `2sao`, `3ao`, `4sao`, `5sao`) VALUES
-(9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', '', 0, 0, 0, 0, 0),
+INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`, `saoI`, `saoII`, `saoIII`, `saoIV`, `saoV`) VALUES
+(9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', '', 3, 1, 2, 5, 37),
 (10, 2, 'Trà sữa Trân Châu', 26000, '01-tra-bi-dao-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
 (11, 2, 'Trà Sữa Matcha Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
 (12, 2, 'Trà Sữa Darjeeling', 26000, '02-vai-300x300.jpg', '', 0, 0, 0, 0, 0),
@@ -333,6 +352,13 @@ ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`ma_nv`);
 
 --
+-- Chỉ mục cho bảng `subscribers`
+--
+ALTER TABLE `subscribers`
+  ADD PRIMARY KEY (`ma_sub`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Chỉ mục cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
@@ -385,6 +411,11 @@ ALTER TABLE `monthem`
 --
 ALTER TABLE `nhanvien`
   MODIFY `ma_nv` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT cho bảng `subscribers`
+--
+ALTER TABLE `subscribers`
+  MODIFY `ma_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT cho bảng `thanhvien`
 --

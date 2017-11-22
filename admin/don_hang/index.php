@@ -154,8 +154,12 @@
         <li>
           <a href="../quan_ly_admin/">
             <i class="fa fa-group"></i> <span>Quản lý admin</span>
-            
           </a>
+          <li>
+          <a href="../subscribers/">
+            <i class="fa fa-envelope"></i> <span>Subscribers, mailing</span>
+          </a>
+        </li>
         </li>
       </ul>
     </section>

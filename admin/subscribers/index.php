@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tin tức</title>
+  <title>Subscribers, mailing</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -31,6 +31,7 @@
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 
 
@@ -142,8 +143,8 @@
             <i class="fa fa-shopping-cart"></i> <span>Đơn Hàng</span>
           </a>
         </li>
-        <li class="active">
-          <a href="#">
+        <li>
+          <a href="../quan_ly_tin_tuc/">
             <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
           </a>
         </li>
@@ -157,8 +158,8 @@
             <i class="fa fa-group"></i> <span>Quản lý admin</span>
           </a>
         </li>
-        <li>
-          <a href="../subscribers/">
+        <li class="active">
+          <a href="#">
             <i class="fa fa-envelope"></i> <span>Subscribers, mailing</span>
           </a>
         </li>
@@ -167,10 +168,36 @@
     <!-- /.sidebar -->
   </aside>
 
-  												<!-- Content Wrapper. Contains page content -->
+  <?php
+	if(isset($_GET["sent"])){
+?>
+<style>
+#sub{
+			position:fixed;
+			width: 180px;
+			top: 7%;
+			margin-left: -90px;
+			left: 50%;
+			box-shadow: 0 0 5px 3px #27ae60;
+			opacity:0;
+			z-index: 1000;
+			}
+</style>
+<div class="alert alert-success" id="sub" label="alert">Mail sent successfully!</div>
+<script>
+$(document).ready(function(){
+	$('#sub').animate({opacity: 1,});
+	setTimeout(function(){
+		$('#sub').animate({opacity: 0,});
+	},2000);
+});
+</script>
 <?php
-	include("tintuc_controller.php");
-	$ctrl = new tintuc_controller();
+	}
+?>												<!-- Content Wrapper. Contains page content -->
+<?php
+	include("sub_controller.php");
+	$ctrl = new sub_controller();
 	$ctrl->process();
 ?>
 											<!-- /.content-wrapper -->
@@ -201,7 +228,7 @@
 </div>
 <!-- ./wrapper -->
 
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- DataTables -->
