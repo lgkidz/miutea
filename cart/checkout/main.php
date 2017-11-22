@@ -50,12 +50,12 @@
     		</tr>
     		<?php
 				for($i=0;$i<$items;$i++){
-					$item = $this->getItem($_SESSION["items"][$i][0]);
+					$item = $this->getItem($_SESSION["items"][$i]->id);
 			?>
 			<tr class="success">
-				<td><h5><?php echo $item->ten_ts?></h5></td>
-				<td><h5><?php echo $_SESSION["items"][$i][1];?></h5></td>
-				<td><h5><?php echo number_format($_SESSION["items"][$i][1] * $item->gia_ts)?> VNĐ</h5></td>
+				<td><h5><?php echo $item->ten_ts?> (<?php echo $_SESSION["items"][$i]->gc;?>, ice <?php echo $_SESSION["items"][$i]->ice;?>%, sugar <?php echo $_SESSION["items"][$i]->sugar;?>%)</h5></td>
+				<td><h5><?php echo $_SESSION["items"][$i]->sl;?></h5></td>
+				<td><h5><?php echo number_format($_SESSION["items"][$i]->sl * $_SESSION["items"][$i]->price)?> VNĐ</h5></td>
 			</tr>
 			<?php } ?>
     		<tr>

@@ -14,9 +14,9 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3><?php echo $mostfav->so_luong; ?></h3>
+              <h3><?php echo isset($mostfav->so_luong)?$mostfav->so_luong:0; ?></h3>
 
-              <p>Most Favorite - <?php echo $mostfav->ten_ts; ?></p>
+              <p>Most Favorite - <?php echo isset($mostfav->ten_ts)?$mostfav->ten_ts:"Neh nothing"; ?></p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>

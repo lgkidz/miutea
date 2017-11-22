@@ -32,7 +32,7 @@
 							<td>
 								<?php
 									foreach($dh as $d){
-										echo "$d->ten_ts x $d->so_luong <br>";
+										echo "$d->ten_ts x $d->so_luong ($d->ghi_chu) <br>";
 									}
 								?>
 							</td>

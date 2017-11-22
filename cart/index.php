@@ -19,6 +19,16 @@ session_start();
 	<body>
 	<?php include('header.php');?>
 	<?php
+	class prod{
+	public $id;
+	public $sl;
+	public $price;
+	public $gc;
+	public $ice;
+	public $sugar;
+	}
+	?>
+	<?php
 		include('cart_controller.php');
 		$controller = new cart_controller();
 		$controller->process();

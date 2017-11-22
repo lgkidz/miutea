@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 21, 2017 lúc 04:06 PM
+-- Thời gian đã tạo: Th10 22, 2017 lúc 06:31 AM
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 7.1.8
 
@@ -52,17 +52,10 @@ CREATE TABLE `chitietdonhang` (
   `ma_dh` int(11) NOT NULL,
   `ma_ts` int(11) NOT NULL,
   `so_luong` int(11) NOT NULL,
+  `ghi_chu` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   `don_gia` int(11) NOT NULL,
   `tong_gia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `chitietdonhang`
---
-
-INSERT INTO `chitietdonhang` (`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`) VALUES
-(1, 35, 4, 38000, 152000),
-(2, 21, 1, 29000, 29000);
 
 -- --------------------------------------------------------
 
@@ -80,14 +73,6 @@ CREATE TABLE `donhang` (
   `trang_thai` tinyint(4) NOT NULL,
   `ma_nv` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `donhang`
---
-
-INSERT INTO `donhang` (`ma_dh`, `ten_kh`, `email`, `ngay_dh`, `noi_giao`, `sdt`, `trang_thai`, `ma_nv`) VALUES
-(1, 'Mạnh', 'mmm@gmail.com', '2017-11-18 23:19:08', 'Hàn', '9000', 0, -1),
-(2, 'Chi', 'chi@gmail.com', '2017-11-18 17:35:33', 'HN', '123', 0, -1);
 
 -- --------------------------------------------------------
 
@@ -129,6 +114,41 @@ INSERT INTO `loaitrasua` (`ma_loai_ts`, `ten_loai`) VALUES
 (2, 'trà sữa'),
 (3, 'đá bào'),
 (4, 'kem cheese');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `monthem`
+--
+
+CREATE TABLE `monthem` (
+  `ma_mt` int(11) NOT NULL,
+  `ten_mt` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gia_mt` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `monthem`
+--
+
+INSERT INTO `monthem` (`ma_mt`, `ten_mt`, `gia_mt`) VALUES
+(1, 'Thạch QQ sữa tươi', 3000),
+(2, 'Thạch QQ cà phê', 3000),
+(3, 'QQ sương sáo', 3000),
+(4, 'QQ sôcôla', 3000),
+(5, 'QQ Dâu', 3000),
+(6, 'QQ Flan', 3000),
+(7, 'Trân châu', 5000),
+(8, 'Thủy Tinh Yogurt', 5000),
+(9, 'Thủy Tinh Kiwi', 5000),
+(10, 'Hạt nguyên vị', 5000),
+(11, 'Hạt Đường Phèn', 5000),
+(12, 'Hạt trà xanh', 5000),
+(13, 'Hạt cà phê', 5000),
+(14, 'Nha Đam', 5000),
+(15, 'Hạt trái cây', 5000),
+(16, 'Sủi bọt', 12000),
+(17, 'Thủy Tinh Dâu', 5000);
 
 -- --------------------------------------------------------
 
@@ -213,51 +233,56 @@ CREATE TABLE `trasua` (
   `ten_ts` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gia_ts` int(11) NOT NULL,
   `hinh_anh_ts` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mo_ta` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
+  `mo_ta` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `1sao` int(11) NOT NULL,
+  `2sao` int(11) NOT NULL,
+  `3ao` int(11) NOT NULL,
+  `4sao` int(11) NOT NULL,
+  `5sao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `trasua`
 --
 
-INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`) VALUES
-(9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', ''),
-(10, 2, 'Trà sữa Trân Châu', 26000, '01-tra-bi-dao-sb-300x300.jpg', ''),
-(11, 2, 'Trà Sữa Matcha Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', ''),
-(12, 2, 'Trà Sữa Darjeeling', 26000, '02-vai-300x300.jpg', ''),
-(13, 2, 'Trà Sữa Sen', 29000, '03-chanh-day-300x300.jpg', ''),
-(14, 2, 'Trà Sữa Dâu Tây', 26000, '03-hong-tra-sb-300x300.jpg', ''),
-(15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, '04-socola-300x300.jpg', ''),
-(17, 2, 'Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', ''),
-(18, 2, 'Trà Sữa Vani', 29000, '05-darjeeling-300x300.jpg', ''),
-(19, 2, 'Trà Sữa Hạnh Nhân', 29000, '05-la-cay-sb-300x300.jpg', ''),
-(20, 2, 'Trà Sữa Mật Ong', 29000, '06-alisan-sb-300x300.jpg', ''),
-(21, 2, 'Trà Sữa Alisan', 29000, '06-caramen-300x300.jpg', ''),
-(22, 2, 'Trà Sữa Quan Âm', 29000, '06-dau-tay-300x300.jpg', ''),
-(23, 2, 'Trà Sữa Ceylon', 23000, '07-gao-sb-300x300.jpg', ''),
-(24, 2, 'Trà Sữa Hoa Lục Trà', 29000, '07-tra-xanh-300x300.jpg', ''),
-(25, 2, 'Trà Sữa Vải', 23000, '08-o-long-300x300.jpg', ''),
-(26, 2, 'Trà Sữa Gạo Nâu', 29000, '08-quan-am-sb-300x300.jpg', ''),
-(27, 2, 'Trà Sũa Trà Xanh', 26000, '08-xoai-300x300.jpg', ''),
-(28, 3, 'Kem Tuyết Matcha', 41000, '09-o-long-sb-300x300.jpg', ''),
-(29, 3, 'Kem Tuyết Xoài', 28000, '09-tachi-300x300.jpg', ''),
-(30, 3, 'Kem Tuyết Dâu', 28000, '10-4-mua-xuan-sb-300x300.jpg', ''),
-(31, 3, 'Kem Tuyết Vải', 28000, '10-socola-300x300.jpg', ''),
-(32, 3, 'Kem Tuyết Chanh Dây', 28000, '11-khoai-mon-300x300.jpg', ''),
-(33, 3, 'Kem Tuyết Sôcôla', 35000, '12-caramen-300x300.jpg', ''),
-(34, 3, 'Kem Tuyết Đào', 35000, '13-vani-300x300.jpg', ''),
-(35, 3, 'Kem Tuyết Caramen', 38000, '14-almond-300x300.jpg', ''),
-(36, 4, 'Trà Tươi Sủi Bọt', 35000, '15-honey-300x300.jpg', ''),
-(37, 4, 'Sủi Bọt Lá Cây', 38000, '22-4-mua-xuan-S-300x300.jpg', ''),
-(38, 4, 'Trà Alisan Sủi Bọt', 38000, '23-sen-300x300.jpg', ''),
-(39, 4, 'Trà Gạo Nâu Sủi Bọt', 38000, '24-tra-sua-toffee-nut-300x300.jpg', ''),
-(40, 4, 'Trà Quan Âm Sủi Bọt', 38000, '25-TS-kiwi-300x300.jpg', ''),
-(41, 4, 'Trà Ô Long Sủi Bọt', 38000, 'Matcheese-300x300.jpg', ''),
-(42, 4, 'Trà 4 Mùa Xuân Sủi Bọt', 38000, 'Mattchalatte-300x300.jpg', ''),
-(43, 4, 'Matcheese', 49000, '01-dau-600x600.jpg', ''),
-(44, 4, 'Trà Bí Đao Sủi Bọt', 33000, '01-tra-bi-dao-sb-300x300.jpg', ''),
-(45, 4, 'Trà Xanh Sủi Bọt', 35000, '02-tra-xanh-sb-300x300.jpg', ''),
-(46, 4, 'Hồng Trà Sủi Bọt', 35000, '02-vai-300x300.jpg', '');
+INSERT INTO `trasua` (`ma_ts`, `ma_loai_ts`, `ten_ts`, `gia_ts`, `hinh_anh_ts`, `mo_ta`, `1sao`, `2sao`, `3ao`, `4sao`, `5sao`) VALUES
+(9, 2, 'Trà sữa 3Q', 31000, '01-dau-600x600.jpg', '', 0, 0, 0, 0, 0),
+(10, 2, 'Trà sữa Trân Châu', 26000, '01-tra-bi-dao-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(11, 2, 'Trà Sữa Matcha Nhật Bản', 38000, '02-tra-xanh-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(12, 2, 'Trà Sữa Darjeeling', 26000, '02-vai-300x300.jpg', '', 0, 0, 0, 0, 0),
+(13, 2, 'Trà Sữa Sen', 29000, '03-chanh-day-300x300.jpg', '', 0, 0, 0, 0, 0),
+(14, 2, 'Trà Sữa Dâu Tây', 26000, '03-hong-tra-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(15, 2, 'Trà Sữa 4 Mùa Xuân', 32000, '04-socola-300x300.jpg', '', 0, 0, 0, 0, 0),
+(17, 2, 'Toffee Nuts Sủi Bọt', 38000, '05-dao-300x300.jpg', '', 0, 0, 0, 0, 0),
+(18, 2, 'Trà Sữa Vani', 29000, '05-darjeeling-300x300.jpg', '', 0, 0, 0, 0, 0),
+(19, 2, 'Trà Sữa Hạnh Nhân', 29000, '05-la-cay-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(20, 2, 'Trà Sữa Mật Ong', 29000, '06-alisan-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(21, 2, 'Trà Sữa Alisan', 29000, '06-caramen-300x300.jpg', '', 0, 0, 0, 0, 0),
+(22, 2, 'Trà Sữa Quan Âm', 29000, '06-dau-tay-300x300.jpg', '', 0, 0, 0, 0, 0),
+(23, 2, 'Trà Sữa Ceylon', 23000, '07-gao-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(24, 2, 'Trà Sữa Hoa Lục Trà', 29000, '07-tra-xanh-300x300.jpg', '', 0, 0, 0, 0, 0),
+(25, 2, 'Trà Sữa Vải', 23000, '08-o-long-300x300.jpg', '', 0, 0, 0, 0, 0),
+(26, 2, 'Trà Sữa Gạo Nâu', 29000, '08-quan-am-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(27, 2, 'Trà Sũa Trà Xanh', 26000, '08-xoai-300x300.jpg', '', 0, 0, 0, 0, 0),
+(28, 3, 'Kem Tuyết Matcha', 41000, '09-o-long-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(29, 3, 'Kem Tuyết Xoài', 28000, '09-tachi-300x300.jpg', '', 0, 0, 0, 0, 0),
+(30, 3, 'Kem Tuyết Dâu', 28000, '10-4-mua-xuan-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(31, 3, 'Kem Tuyết Vải', 28000, '10-socola-300x300.jpg', '', 0, 0, 0, 0, 0),
+(32, 3, 'Kem Tuyết Chanh Dây', 28000, '11-khoai-mon-300x300.jpg', '', 0, 0, 0, 0, 0),
+(33, 3, 'Kem Tuyết Sôcôla', 35000, '12-caramen-300x300.jpg', '', 0, 0, 0, 0, 0),
+(34, 3, 'Kem Tuyết Đào', 35000, '13-vani-300x300.jpg', '', 0, 0, 0, 0, 0),
+(35, 3, 'Kem Tuyết Caramen', 38000, '14-almond-300x300.jpg', '', 0, 0, 0, 0, 0),
+(36, 4, 'Trà Tươi Sủi Bọt', 35000, '15-honey-300x300.jpg', '', 0, 0, 0, 0, 0),
+(37, 4, 'Sủi Bọt Lá Cây', 38000, '22-4-mua-xuan-S-300x300.jpg', '', 0, 0, 0, 0, 0),
+(38, 4, 'Trà Alisan Sủi Bọt', 38000, '23-sen-300x300.jpg', '', 0, 0, 0, 0, 0),
+(39, 4, 'Trà Gạo Nâu Sủi Bọt', 38000, '24-tra-sua-toffee-nut-300x300.jpg', '', 0, 0, 0, 0, 0),
+(40, 4, 'Trà Quan Âm Sủi Bọt', 38000, '25-TS-kiwi-300x300.jpg', '', 0, 0, 0, 0, 0),
+(41, 4, 'Trà Ô Long Sủi Bọt', 38000, 'Matcheese-300x300.jpg', '', 0, 0, 0, 0, 0),
+(42, 4, 'Trà 4 Mùa Xuân Sủi Bọt', 38000, 'Mattchalatte-300x300.jpg', '', 0, 0, 0, 0, 0),
+(43, 4, 'Matcheese', 49000, '01-dau-600x600.jpg', '', 0, 0, 0, 0, 0),
+(44, 4, 'Trà Bí Đao Sủi Bọt', 33000, '01-tra-bi-dao-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(45, 4, 'Trà Xanh Sủi Bọt', 35000, '02-tra-xanh-sb-300x300.jpg', '', 0, 0, 0, 0, 0),
+(46, 4, 'Hồng Trà Sủi Bọt', 35000, '02-vai-300x300.jpg', '', 0, 0, 0, 0, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -296,6 +321,12 @@ ALTER TABLE `loaitrasua`
   ADD PRIMARY KEY (`ma_loai_ts`);
 
 --
+-- Chỉ mục cho bảng `monthem`
+--
+ALTER TABLE `monthem`
+  ADD PRIMARY KEY (`ma_mt`);
+
+--
 -- Chỉ mục cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
@@ -328,12 +359,12 @@ ALTER TABLE `trasua`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ma_ad` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ma_dh` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `feedback`
 --
@@ -344,6 +375,11 @@ ALTER TABLE `feedback`
 --
 ALTER TABLE `loaitrasua`
   MODIFY `ma_loai_ts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT cho bảng `monthem`
+--
+ALTER TABLE `monthem`
+  MODIFY `ma_mt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT cho bảng `nhanvien`
 --

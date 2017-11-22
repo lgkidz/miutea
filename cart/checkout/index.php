@@ -18,6 +18,16 @@ session_start();
 	</head>
 	<body>
 	<?php include('header.php');?>
+	<?php
+	class prod{
+	public $id;
+	public $sl;
+	public $price;
+	public $gc;
+	public $ice;
+	public $sugar;
+	}
+	?>
 	<?php include("checkout_controller.php");?>
 	<?php
 		$controller = new checkout_controller();

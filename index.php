@@ -69,16 +69,16 @@ session_start();
     <div class="bestseller">
     	    <h1 class="title" style="padding-top: 20px;">Bestseller</h1>
         <div class="slider" role="toolbar">
-            <div><a href="#"><img src="Content/Images/06-dau-tay-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/07-gao-sb-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/07-tra-xanh-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/08-o-long-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/08-quan-am-sb-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/08-xoai-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/09-o-long-sb-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/09-tachi-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/10-4-mua-xuan-sb-300x300.jpg" /></a></div>
-            <div><a href="#"><img src="Content/Images/10-socola-300x300.jpg" /></a></div>
+            <div><a href="sp/trasua.php"><img src="Content/Images/06-dau-tay-300x300.jpg" /></a></div>
+            <div><a href="sp/dabao.php"><img src="Content/Images/07-gao-sb-300x300.jpg" /></a></div>
+            <div><a href="sp/kemcheese.php"><img src="Content/Images/07-tra-xanh-300x300.jpg" /></a></div>
+            <div><a href="sp/dabao.php"><img src="Content/Images/08-o-long-300x300.jpg" /></a></div>
+            <div><a href="sp/trasua.php"><img src="Content/Images/08-quan-am-sb-300x300.jpg" /></a></div>
+            <div><a href="sp/kemcheese.php"><img src="Content/Images/08-xoai-300x300.jpg" /></a></div>
+            <div><a href="sp/trasua.php"><img src="Content/Images/09-o-long-sb-300x300.jpg" /></a></div>
+            <div><a href="sp/kemcheese.php"><img src="Content/Images/09-tachi-300x300.jpg" /></a></div>
+            <div><a href="sp/dabao.php"><img src="Content/Images/10-4-mua-xuan-sb-300x300.jpg" /></a></div>
+            <div><a href="sp/trasua.php"><img src="Content/Images/10-socola-300x300.jpg" /></a></div>
         </div>
     </div>
 	<div class ="dathang">

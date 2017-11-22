@@ -90,14 +90,15 @@ h1 {
 		<tr>
 			<th colspan="2"><h5><?php echo $items ?> sản phẩm</h5></th>
 			<th><h5>Đơn giá</h5></th>
+			<th><h5>Ghi chú</h5></th>
 			<th><h5>Số lượng</h5></th>
 			<th></th>
 		</tr>
 		<?php 	
 				
 			   for($i=0;$i<$items;$i++){
-				$item = $this->getItem($_SESSION["items"][$i][0]);
-				   $final = $final + $_SESSION["items"][$i][1] * $item->gia_ts;
+				$item = $this->getItem($_SESSION["items"][$i]->id);
+				   $final = $final + $_SESSION["items"][$i]->price * $_SESSION["items"][$i]->sl;
 		?>
 		
 		<tr>
@@ -111,10 +112,13 @@ h1 {
 					window.location = location;
 				}
 			</script>
-			<td><h5><select id="sl<?php echo $i;?>" onChange="changesl<?php echo $i;?>();"><?php for($j=1;$j<=5;$j++){ ?><option <?php echo $j==$_SESSION["items"][$i][1]?"selected":"" ?> value="<?php echo $j;?>"><?php echo $j;?></option><?php }?></select></h5></td>
+			<td><h5><?php echo $_SESSION["items"][$i]->gc;?>, ice <?php echo $_SESSION["items"][$i]->ice;?>%, sugar <?php echo $_SESSION["items"][$i]->sugar;?>% </h5></td>
+			<td><h5><select id="sl<?php echo $i;?>" onChange="changesl<?php echo $i;?>();"><?php for($j=1;$j<=5;$j++){ ?><option <?php echo $j==$_SESSION["items"][$i]->sl?"selected":"" ?> value="<?php echo $j;?>"><?php echo $j;?></option><?php }?></select></h5></td>
+			
 			<td><a href="?delete=<?php echo $i; ?>"><span style="margin-top: 15px;" class="glyphicon glyphicon-remove"></span></a></td>
 		</tr>
 		<?php } ?>
+		
 	</table>
     <?php } ?>
     </div>

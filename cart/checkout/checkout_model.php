@@ -39,8 +39,8 @@ class checkout_model{
 		return $id;
 	}
 	
-	public function placeOrderDetails($id_dh,$item_id,$quantity,$peritem,$total){
-		$query = "INSERT INTO `chitietdonhang`(`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`) VALUES ('$id_dh','$item_id','$quantity','$peritem','$total')";
+	public function placeOrderDetails($id_dh,$item_id,$quantity,$peritem,$total,$gc){
+		$query = "INSERT INTO `chitietdonhang`(`ma_dh`, `ma_ts`, `so_luong`, `don_gia`, `tong_gia`, `ghi_chu`) VALUES ('$id_dh','$item_id','$quantity','$peritem','$total','$gc')";
 		$statement = $this->con->prepare($query);
 		$statement->execute();
 	}

@@ -1,10 +1,12 @@
 <?php
+
 include("cart_model.php");
 class cart_controller{
 	public $model;
-	
+	public $prod;
 	public function __construct(){
 		$this->model = new cart_model();
+		$this->prod  = new prod();
 	}
 	
 	public function getItem($id){
@@ -26,7 +28,7 @@ class cart_controller{
 		if(isset($_GET["editsl"]) && isset($_GET["sl"])){
 			$id = $_GET["editsl"];
 			$sl = $_GET["sl"];
-			$_SESSION["items"][$id][1] = $sl;
+			$_SESSION["items"][$id]->sl = $sl;
 		}
 		else if(isset($_GET["delete"])){
 			$id = $_GET["delete"];
