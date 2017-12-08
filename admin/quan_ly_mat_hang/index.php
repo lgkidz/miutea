@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <?php
 	session_start();
 	if(!isset($_SESSION['legal'])){
 		header("Location: ../index.php?err=2");
 	}
 ?>
+<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">

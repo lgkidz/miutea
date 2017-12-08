@@ -28,7 +28,7 @@ if(isset($_POST["dangnhap"])){
 	if($rert->ban == 1){
 		header("location: ../dangnhap.php?loginerror=4");
 	}
-	else if($rert->mat_khau_tv == $pas){
+	else if($rert->mat_khau_tv == sha1($pas) ){
 		session_start();
 		$_SESSION["user_name"] = $rert->ten_tv;
 		$_SESSION["email"] = $rert->email;

@@ -17,6 +17,7 @@
 		<th>Nội dung</th>
 		<th>Thành tiền</th>
 		<th>Ngày đặt hàng</th>
+		<th>Tên khách hàng</th>
 		<th>Địa chỉ</th>
 		<th>Điện thoại</th>
 		<th>Trạng thái</th>
@@ -38,6 +39,7 @@
 		<td><?php echo $nd;?></td>
 		<td><?php echo number_format($p);?> VNĐ</td>
 		<td><?php echo date_format(date_create($or->ngay_dh),"H:i d/m/Y")?></td>
+		<td><?php echo $or->ten_kh?></td>
 		<td><?php echo $or->noi_giao?></td>
 		<td><?php echo $or->sdt?></td>
 		<td><?php $x=$or->trang_thai;if($x==1){echo "Đã Giao";}else if($x==0){echo "Đang xử lý";}else if($x==-1){echo "Đã Hủy";}?></td>

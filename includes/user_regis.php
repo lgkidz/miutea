@@ -14,6 +14,7 @@ if(isset($_POST["dangky"])){
 	}
 	if(isset($_POST["dkpassword"])){
 		$pas = $_POST["dkpassword"];
+		$pas = sha1($pas);
 	}
 	else{
 		$pas = "n/a";
