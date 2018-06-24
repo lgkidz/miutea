@@ -27,13 +27,13 @@ Import miutea.sql into your sql database
 
 type this address into your browser
 ```
-localhost:8888/miutea/
+localhost:80/miutea/
 ```
 
 ### Admin page
 
 ```
-localhost:8888/miutea/admin/
+localhost:80/miutea/admin/
 ```
 default administrator account will be
 ```
